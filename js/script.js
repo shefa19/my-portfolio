@@ -870,9 +870,8 @@
 
     init() {
       // Initialize EmailJS with your public key
-      // TODO: Replace with your actual EmailJS public key
       if (typeof emailjs !== 'undefined') {
-        emailjs.init('YOUR_PUBLIC_KEY');
+        emailjs.init('gP0OB6dia_KlwraDC');
       } else {
         console.warn('EmailJS library not loaded. Using fallback form handling.');
         return;
@@ -925,10 +924,10 @@
       submitBtn.disabled = true;
 
       try {
-        // TODO: Replace with your EmailJS service and template IDs
+        // EmailJS configuration - ALL CORRECT ✅
         const response = await emailjs.send(
-          'YOUR_SERVICE_ID',
-          'YOUR_TEMPLATE_ID',
+          'portfolio_contact_form',  // ✅ Service ID (custom)
+          'template_v4qdo8m',        // ✅ Template ID
           formData
         );
 
