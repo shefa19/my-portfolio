@@ -869,18 +869,21 @@
     isSending: false,
 
     init() {
-      // Initialize EmailJS with your public key
       if (typeof emailjs !== 'undefined') {
-        emailjs.init('gP0OB6dia_KlwraDC');
+        try {
+          emailjs.init('gP0OB6dia_KlwraDC');
+          console.log('✅ EmailJS initialized successfully');
+        } catch (error) {
+          console.error('❌ Failed to initialize EmailJS:', error);
+        }
       } else {
-        console.warn('EmailJS library not loaded. Using fallback form handling.');
+        console.warn('❌ EmailJS library not loaded. Using fallback form handling.');
         return;
       }
 
       const form = document.querySelector('.contact-form');
       if (!form) return;
 
-      // Remove existing submit listener and add ours
       form.removeEventListener('submit', ContactForm.handleSubmit);
       form.addEventListener('submit', this.handleSubmit.bind(this));
     },
@@ -894,7 +897,7 @@
       const submitBtn = form.querySelector('button[type="submit"]');
       const originalText = submitBtn.innerHTML;
 
-      // Validate all fields using ContactForm validation
+      // Validate all fields
       let allValid = true;
       const inputs = form.querySelectorAll('.form-input, .form-textarea');
       inputs.forEach(input => {
@@ -919,23 +922,23 @@
         message: form.querySelector('#formMessage').value.trim(),
       };
 
+      console.log('📤 Sending email with data:', formData);
+
       this.isSending = true;
       submitBtn.innerHTML = 'Sending... <span aria-hidden="true">⏳</span>';
       submitBtn.disabled = true;
 
       try {
-        // EmailJS configuration - ALL CORRECT ✅
         const response = await emailjs.send(
-          'portfolio_contact_form',  // ✅ Service ID (custom)
-          'template_v4qdo8m',        // ✅ Template ID
+          'portfolio_contact_form',  // Service ID
+          'template_v4qdo8m',        // Template ID
           formData
         );
 
-        console.log('Email sent successfully:', response);
+        console.log('✅ Email sent successfully:', response);
         ContactForm.showMessage('Your message has been sent successfully! 🎉', 'success');
         form.reset();
         
-        // Clear validation states
         inputs.forEach(input => {
           input.dataset.valid = 'true';
           input.style.borderColor = '';
@@ -943,8 +946,43 @@
           if (error) error.remove();
         });
       } catch (error) {
-        console.error('Email sending failed:', error);
-        ContactForm.showMessage('Failed to send message. Please try again.', 'error');
+        console.error('❌ Email sending failed:', error);
+        
+        // Log all error details
+        console.log('Error details:');
+        console.log('- Name:', error.name);
+        console.log('- Message:', error.message);
+        console.log('- Text:', error.text);
+        console.log('- Status:', error.status);
+        console.log('- Full error:', error);
+        
+        // Determine user-friendly error message
+        let userMessage = 'Failed to send message. Please try again.';
+        
+        if (error.text) {
+          try {
+            const parsed = JSON.parse(error.text);
+            if (parsed.message) {
+              userMessage = parsed.message;
+            }
+          } catch (e) {
+            // If error.text is short, use it directly
+            if (typeof error.text === 'string' && error.text.length < 100) {
+              userMessage = error.text;
+            }
+          }
+        }
+        
+        // Check for specific error codes
+        if (error.status === 401) {
+          userMessage = 'Invalid API key. Please check your EmailJS Public Key.';
+        } else if (error.status === 404) {
+          userMessage = 'Service or Template not found. Please check your IDs.';
+        } else if (error.status === 429) {
+          userMessage = 'Rate limit exceeded. Please try again later.';
+        }
+        
+        ContactForm.showMessage(userMessage, 'error');
       } finally {
         this.isSending = false;
         submitBtn.innerHTML = originalText;
