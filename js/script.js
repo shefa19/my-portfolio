@@ -446,11 +446,12 @@
             observer.unobserve(entry.target);
           }
         });
-      }, { threshold: 0.5 });
+      }, { threshold: 0.3 });
 
       // Observe the parent container of counters
       const parent = DOM.statNumbers[0].closest('.stats-grid') ||
-        DOM.statNumbers[0].closest('.about-stats');
+        DOM.statNumbers[0].closest('.about-stats') ||
+        DOM.statNumbers[0].closest('.about-stats-container');
       if (parent) {
         observer.observe(parent);
       }
@@ -620,13 +621,13 @@
 
       this.isSubmitting = true;
       const submitBtn = DOM.contactForm.querySelector('button[type="submit"]');
-      const originalText = submitBtn.textContent;
-      submitBtn.textContent = 'Sending...';
+      const originalText = submitBtn.innerHTML;
+      submitBtn.innerHTML = 'Sending...';
       submitBtn.disabled = true;
 
       // Simulate form submission
       setTimeout(() => {
-        this.showMessage('Your message has been sent successfully!', 'success');
+        this.showMessage('Your message has been sent successfully! 🎉', 'success');
         DOM.contactForm.reset();
         DOM.formInputs.forEach(input => {
           input.dataset.valid = 'true';
@@ -635,7 +636,7 @@
           if (error) error.remove();
         });
         this.isSubmitting = false;
-        submitBtn.textContent = originalText;
+        submitBtn.innerHTML = originalText;
         submitBtn.disabled = false;
       }, 1500);
     },
@@ -651,6 +652,8 @@
         border-radius: var(--radius-md);
         margin-top: var(--space-md);
         font-weight: 500;
+        text-align: center;
+        animation: fadeIn 0.3s ease;
         ${type === 'success' ? 'background: var(--color-success); color: #fff;' :
           'background: var(--color-danger); color: #fff;'}
       `;
@@ -658,7 +661,11 @@
       DOM.contactForm.appendChild(msg);
 
       setTimeout(() => {
-        if (msg.parentElement) msg.remove();
+        if (msg.parentElement) {
+          msg.style.opacity = '0';
+          msg.style.transition = 'opacity 0.3s ease';
+          setTimeout(() => msg.remove(), 300);
+        }
       }, 5000);
     },
   };
@@ -731,7 +738,7 @@
     init() {
       if (Utils.isTouchDevice() || Utils.prefersReducedMotion()) return;
 
-      const cards = document.querySelectorAll('.project-card, .certificate-card, .skill-category, .education-card, .contact-card');
+      const cards = document.querySelectorAll('.project-card, .certificate-card, .skill-category, .education-card, .contact-card, .highlight-card');
 
       cards.forEach(card => {
         card.addEventListener('mousemove', this.handleMove.bind(this));
@@ -748,8 +755,8 @@
       const centerX = rect.width / 2;
       const centerY = rect.height / 2;
 
-      const rotateX = ((y - centerY) / centerY) * -8;
-      const rotateY = ((x - centerX) / centerX) * 8;
+      const rotateX = ((y - centerY) / centerY) * -6;
+      const rotateY = ((x - centerX) / centerX) * 6;
 
       card.style.transform =
         `perspective(800px) rotateX(${rotateX}deg) rotateY(${rotateY}deg) translateY(-4px)`;
@@ -856,7 +863,99 @@
   };
 
   // ============================================================
-  // 19. INITIALIZATION
+  // 19. EMAILJS CONTACT FORM INTEGRATION
+  // ============================================================
+  const EmailService = {
+    isSending: false,
+
+    init() {
+      // Initialize EmailJS with your public key
+      // TODO: Replace with your actual EmailJS public key
+      if (typeof emailjs !== 'undefined') {
+        emailjs.init('YOUR_PUBLIC_KEY');
+      } else {
+        console.warn('EmailJS library not loaded. Using fallback form handling.');
+        return;
+      }
+
+      const form = document.querySelector('.contact-form');
+      if (!form) return;
+
+      // Remove existing submit listener and add ours
+      form.removeEventListener('submit', ContactForm.handleSubmit);
+      form.addEventListener('submit', this.handleSubmit.bind(this));
+    },
+
+    async handleSubmit(e) {
+      e.preventDefault();
+
+      if (this.isSending) return;
+
+      const form = e.currentTarget;
+      const submitBtn = form.querySelector('button[type="submit"]');
+      const originalText = submitBtn.innerHTML;
+
+      // Validate all fields using ContactForm validation
+      let allValid = true;
+      const inputs = form.querySelectorAll('.form-input, .form-textarea');
+      inputs.forEach(input => {
+        if (input.hasAttribute('required') && !input.value.trim()) {
+          allValid = false;
+          input.style.borderColor = 'var(--color-danger)';
+        } else {
+          input.style.borderColor = '';
+        }
+      });
+
+      if (!allValid) {
+        ContactForm.showMessage('Please fill in all required fields.', 'error');
+        return;
+      }
+
+      // Prepare data
+      const formData = {
+        name: form.querySelector('#formName').value.trim(),
+        email: form.querySelector('#formEmail').value.trim(),
+        subject: form.querySelector('#formSubject').value.trim() || 'New Contact Form Message',
+        message: form.querySelector('#formMessage').value.trim(),
+      };
+
+      this.isSending = true;
+      submitBtn.innerHTML = 'Sending... <span aria-hidden="true">⏳</span>';
+      submitBtn.disabled = true;
+
+      try {
+        // TODO: Replace with your EmailJS service and template IDs
+        const response = await emailjs.send(
+          'YOUR_SERVICE_ID',
+          'YOUR_TEMPLATE_ID',
+          formData
+        );
+
+        console.log('Email sent successfully:', response);
+        ContactForm.showMessage('Your message has been sent successfully! 🎉', 'success');
+        form.reset();
+        
+        // Clear validation states
+        inputs.forEach(input => {
+          input.dataset.valid = 'true';
+          input.style.borderColor = '';
+          const error = input.parentElement.querySelector('.field-error');
+          if (error) error.remove();
+        });
+      } catch (error) {
+        console.error('Email sending failed:', error);
+        ContactForm.showMessage('Failed to send message. Please try again.', 'error');
+      } finally {
+        this.isSending = false;
+        submitBtn.innerHTML = originalText;
+        submitBtn.disabled = false;
+      }
+    }
+  };
+
+  // ============================================================
+  // 20. INITIALIZATION
   // ============================================================
   const App = {
     init() {
@@ -871,10 +970,18 @@
       CardTilt.init();
       ImageLoader.init();
       BackToTop.init();
-      ContactForm.init();
       Accessibility.init();
       ResizeHandler.init();
       FooterYear.init();
+
+      // Initialize Contact Form with EmailJS
+      // If EmailJS is not available, use fallback
+      if (typeof emailjs !== 'undefined') {
+        EmailService.init();
+      } else {
+        ContactForm.init();
+        console.log('📧 Using fallback contact form (EmailJS not loaded)');
+      }
 
       // Cursor should be initialized after theme and other modules
       setTimeout(() => {
@@ -886,7 +993,7 @@
   };
 
   // ============================================================
-  // 20. DOM READY
+  // 21. DOM READY
   // ============================================================
   if (document.readyState === 'loading') {
     document.addEventListener('DOMContentLoaded', () => App.init());
@@ -895,13 +1002,14 @@
   }
 
   // ============================================================
-  // 21. EXPOSE FOR DEBUGGING (optional)
+  // 22. EXPOSE FOR DEBUGGING (optional)
   // ============================================================
   // window.__PORTFOLIO = {
   //   App,
   //   Utils,
   //   Theme,
   //   Navigation,
+  //   EmailService,
   // };
 
 })();
