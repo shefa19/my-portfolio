@@ -931,7 +931,7 @@
       try {
         const response = await emailjs.send(
           'portfolio_contact_form',  // Service ID
-          'template_v4qdo8m',        // Template ID
+          'template_54q6hun',        // Template ID
           formData
         );
 
