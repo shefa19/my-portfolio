@@ -1378,7 +1378,7 @@ ol {
 }
 
 /* ============================================================
-   14. EDUCATION
+   14. EDUCATION - WITH BACKGROUND IMAGES
    ============================================================ */
 .section-education {
   padding: var(--space-4xl) 0;
@@ -1413,15 +1413,51 @@ ol {
   gap: var(--space-lg);
   padding: var(--space-xl);
   background: var(--color-card);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   border: 1px solid var(--color-card-border);
   border-radius: var(--radius-lg);
   transition: all var(--transition-smooth);
   box-shadow: var(--shadow-sm);
+  position: relative;
+  overflow: hidden;
+  min-height: 220px;
 }
 .education-card:hover {
   transform: translateY(-4px);
   box-shadow: var(--shadow-md);
   border-color: var(--color-border-hover);
+}
+
+/* Education Card Overlay for Text Readability */
+.education-card-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(255, 255, 255, 0.85);
+  transition: all var(--transition-smooth);
+  z-index: 0;
+}
+
+/* Dark Mode Overlay */
+[data-theme="dark"] .education-card-overlay {
+  background: rgba(15, 15, 26, 0.88);
+}
+
+/* Ensure all content is above overlay */
+.education-card .education-icon,
+.education-card .education-content {
+  position: relative;
+  z-index: 1;
+}
+
+/* Hover Effect - Overlay becomes slightly transparent */
+.education-card:hover .education-card-overlay {
+  background: rgba(255, 255, 255, 0.92);
+}
+
+[data-theme="dark"] .education-card:hover .education-card-overlay {
+  background: rgba(15, 15, 26, 0.92);
 }
 
 .education-icon {
@@ -1476,6 +1512,29 @@ ol {
   color: var(--color-text-secondary);
   line-height: 1.6;
   margin-top: var(--space-xs);
+}
+
+/* Education Responsive */
+@media (max-width: 768px) {
+  .education-card {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    min-height: 280px;
+    padding: var(--space-lg);
+  }
+  .education-header {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .education-card {
+    min-height: 300px;
+    padding: var(--space-md);
+    gap: var(--space-md);
+  }
 }
 
 /* ============================================================
@@ -1554,7 +1613,7 @@ ol {
 }
 
 /* ============================================================
-   16. CERTIFICATES
+   16. CERTIFICATES - WITH BACKGROUND IMAGES
    ============================================================ */
 .section-certificates {
   padding: var(--space-4xl) 0;
@@ -1589,15 +1648,51 @@ ol {
   gap: var(--space-md);
   padding: var(--space-lg);
   background: var(--color-card);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   border: 1px solid var(--color-card-border);
   border-radius: var(--radius-lg);
   transition: all var(--transition-smooth);
   box-shadow: var(--shadow-sm);
+  position: relative;
+  overflow: hidden;
+  min-height: 160px;
 }
 .certificate-card:hover {
   transform: translateY(-3px);
   box-shadow: var(--shadow-md);
   border-color: var(--color-border-hover);
+}
+
+/* Certificate Card Overlay for Text Readability */
+.certificate-card-overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(255, 255, 255, 0.88);
+  transition: all var(--transition-smooth);
+  z-index: 0;
+}
+
+/* Dark Mode Overlay */
+[data-theme="dark"] .certificate-card-overlay {
+  background: rgba(15, 15, 26, 0.90);
+}
+
+/* Ensure all content is above overlay */
+.certificate-card .cert-icon,
+.certificate-card .cert-content {
+  position: relative;
+  z-index: 1;
+}
+
+/* Hover Effect - Overlay becomes slightly transparent */
+.certificate-card:hover .certificate-card-overlay {
+  background: rgba(255, 255, 255, 0.94);
+}
+
+[data-theme="dark"] .certificate-card:hover .certificate-card-overlay {
+  background: rgba(15, 15, 26, 0.94);
 }
 
 .cert-icon {
@@ -1635,6 +1730,28 @@ ol {
 }
 .cert-link:hover {
   color: var(--color-accent-hover);
+}
+
+/* Certificate Responsive */
+@media (max-width: 768px) {
+  .certificate-card {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    min-height: 200px;
+    padding: var(--space-md);
+  }
+  .certificate-card .cert-content {
+    align-items: center;
+  }
+}
+
+@media (max-width: 480px) {
+  .certificate-card {
+    min-height: 220px;
+    padding: var(--space-md);
+    gap: var(--space-sm);
+  }
 }
 
 /* ============================================================
@@ -2701,9 +2818,22 @@ ol {
     flex-direction: column;
     align-items: center;
     text-align: center;
+    min-height: 280px;
+    padding: var(--space-lg);
   }
   .education-header {
     flex-direction: column;
+    align-items: center;
+  }
+
+  .certificate-card {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    min-height: 200px;
+    padding: var(--space-md);
+  }
+  .certificate-card .cert-content {
     align-items: center;
   }
 
@@ -2786,6 +2916,18 @@ ol {
 
   .social-links {
     justify-content: center;
+  }
+
+  .education-card {
+    min-height: 300px;
+    padding: var(--space-md);
+    gap: var(--space-md);
+  }
+
+  .certificate-card {
+    min-height: 220px;
+    padding: var(--space-md);
+    gap: var(--space-sm);
   }
 }
 
