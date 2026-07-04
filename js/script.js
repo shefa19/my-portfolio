@@ -929,65 +929,32 @@
       submitBtn.disabled = true;
 
       try {
-        const response = await emailjs.send(
-          'portfolio_contact_form',  // Service ID
-          'template_54q6hun',        // Template ID
-          formData
-        );
+  // EmailJS configuration - ALL CORRECT NOW ✅
+  const response = await emailjs.send(
+    'portfolio_contact_form',  // ✅ Service ID
+    'template_54q6hun',        // ✅ Your correct Template ID
+    formData
+  );
 
-        console.log('✅ Email sent successfully:', response);
-        ContactForm.showMessage('Your message has been sent successfully! 🎉', 'success');
-        form.reset();
-        
-        inputs.forEach(input => {
-          input.dataset.valid = 'true';
-          input.style.borderColor = '';
-          const error = input.parentElement.querySelector('.field-error');
-          if (error) error.remove();
-        });
-      } catch (error) {
-        console.error('❌ Email sending failed:', error);
-        
-        // Log all error details
-        console.log('Error details:');
-        console.log('- Name:', error.name);
-        console.log('- Message:', error.message);
-        console.log('- Text:', error.text);
-        console.log('- Status:', error.status);
-        console.log('- Full error:', error);
-        
-        // Determine user-friendly error message
-        let userMessage = 'Failed to send message. Please try again.';
-        
-        if (error.text) {
-          try {
-            const parsed = JSON.parse(error.text);
-            if (parsed.message) {
-              userMessage = parsed.message;
-            }
-          } catch (e) {
-            // If error.text is short, use it directly
-            if (typeof error.text === 'string' && error.text.length < 100) {
-              userMessage = error.text;
-            }
-          }
-        }
-        
-        // Check for specific error codes
-        if (error.status === 401) {
-          userMessage = 'Invalid API key. Please check your EmailJS Public Key.';
-        } else if (error.status === 404) {
-          userMessage = 'Service or Template not found. Please check your IDs.';
-        } else if (error.status === 429) {
-          userMessage = 'Rate limit exceeded. Please try again later.';
-        }
-        
-        ContactForm.showMessage(userMessage, 'error');
-      } finally {
-        this.isSending = false;
-        submitBtn.innerHTML = originalText;
-        submitBtn.disabled = false;
-      }
+  console.log('✅ Email sent successfully:', response);
+  ContactForm.showMessage('Your message has been sent successfully! 🎉', 'success');
+  form.reset();
+  
+  // Clear validation states
+  inputs.forEach(input => {
+    input.dataset.valid = 'true';
+    input.style.borderColor = '';
+    const error = input.parentElement.querySelector('.field-error');
+    if (error) error.remove();
+  });
+} catch (error) {
+  console.error('❌ Email sending failed:', error);
+  ContactForm.showMessage('Failed to send message. Please try again.', 'error');
+} finally {
+  this.isSending = false;
+  submitBtn.innerHTML = originalText;
+  submitBtn.disabled = false;
+}
     }
   };
 
