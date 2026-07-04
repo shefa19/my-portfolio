@@ -558,28 +558,111 @@ ol {
   align-items: center;
 }
 
+/* Premium Hero Badge */
 .hero-badge {
   display: inline-flex;
   align-items: center;
-  gap: var(--space-sm);
-  padding: var(--space-sm) var(--space-lg);
-  background: var(--color-accent-light);
-  border: 1px solid var(--color-accent);
-  border-radius: var(--radius-full);
-  font-size: 0.75rem;
+  gap: 12px;
+  padding: 10px 24px 10px 20px;
+  background: rgba(108, 92, 231, 0.08);
+  backdrop-filter: blur(16px) saturate(180%);
+  -webkit-backdrop-filter: blur(16px) saturate(180%);
+  border: 1px solid rgba(108, 92, 231, 0.25);
+  border-radius: 100px;
+  font-size: 0.8rem;
   font-weight: 600;
   color: var(--color-accent);
   letter-spacing: 0.04em;
   text-transform: uppercase;
   margin-bottom: var(--space-lg);
+  box-shadow: 
+    0 4px 20px rgba(108, 92, 231, 0.15),
+    inset 0 1px 0 rgba(255, 255, 255, 0.1);
+  transition: all var(--transition-smooth);
+  position: relative;
+  overflow: hidden;
+  animation: badgeFadeIn 0.8s ease-out forwards, badgeFloat 4s ease-in-out infinite 0.8s;
+  cursor: default;
+  z-index: 2;
 }
+
+/* Badge Shimmer Effect */
+.hero-badge::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 200%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    rgba(255, 255, 255, 0.05) 30%,
+    rgba(255, 255, 255, 0.1) 50%,
+    rgba(255, 255, 255, 0.05) 70%,
+    transparent 100%
+  );
+  transform: skewX(-25deg);
+  animation: badgeShimmer 6s ease-in-out infinite;
+  pointer-events: none;
+}
+
+/* Badge Hover State */
+.hero-badge:hover {
+  transform: translateY(-2px) scale(1.02);
+  border-color: var(--color-accent);
+  box-shadow: 
+    0 8px 40px rgba(108, 92, 231, 0.25),
+    inset 0 1px 0 rgba(255, 255, 255, 0.15);
+  background: rgba(108, 92, 231, 0.12);
+}
+
+/* Badge Text */
+.hero-badge span:not(.badge-dot) {
+  position: relative;
+  z-index: 1;
+}
+
+/* Dark Mode Support for Badge */
+[data-theme="dark"] .hero-badge {
+  background: rgba(162, 155, 254, 0.08);
+  border-color: rgba(162, 155, 254, 0.2);
+  box-shadow: 
+    0 4px 20px rgba(162, 155, 254, 0.1),
+    inset 0 1px 0 rgba(255, 255, 255, 0.05);
+}
+
+[data-theme="dark"] .hero-badge:hover {
+  background: rgba(162, 155, 254, 0.15);
+  border-color: var(--color-accent);
+  box-shadow: 
+    0 8px 40px rgba(162, 155, 254, 0.2),
+    inset 0 1px 0 rgba(255, 255, 255, 0.08);
+}
+
+/* Premium Status Dot */
 .badge-dot {
   display: inline-block;
-  width: 8px;
-  height: 8px;
+  width: 10px;
+  height: 10px;
   border-radius: 50%;
-  background: var(--color-accent);
-  animation: pulse-dot 2s ease-in-out infinite;
+  background: var(--color-success);
+  position: relative;
+  flex-shrink: 0;
+  box-shadow: 0 0 12px rgba(16, 185, 129, 0.4);
+  animation: dotPulse 2.5s ease-in-out infinite;
+}
+
+/* Dot Inner Glow */
+.badge-dot::after {
+  content: '';
+  position: absolute;
+  inset: -4px;
+  border-radius: 50%;
+  background: var(--color-success);
+  opacity: 0.2;
+  animation: dotRipple 2.5s ease-in-out infinite;
+  pointer-events: none;
 }
 
 .hero-title {
@@ -2288,6 +2371,74 @@ ol {
   }
 }
 
+/* ============================================================
+   BADGE ANIMATIONS
+   ============================================================ */
+
+/* Fade In on Load */
+@keyframes badgeFadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px) scale(0.95);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* Gentle Floating */
+@keyframes badgeFloat {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-4px);
+  }
+}
+
+/* Shimmer Sweep */
+@keyframes badgeShimmer {
+  0% {
+    left: -100%;
+    opacity: 0;
+  }
+  20% {
+    opacity: 1;
+  }
+  80% {
+    opacity: 1;
+  }
+  100% {
+    left: 100%;
+    opacity: 0;
+  }
+}
+
+/* Dot Pulse */
+@keyframes dotPulse {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 1;
+  }
+  50% {
+    transform: scale(1.15);
+    opacity: 0.85;
+  }
+}
+
+/* Dot Ripple Effect */
+@keyframes dotRipple {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 0.2;
+  }
+  50% {
+    transform: scale(2);
+    opacity: 0;
+  }
+}
+
 /* Reveal Animations */
 .reveal {
   opacity: 0;
@@ -2356,6 +2507,24 @@ ol {
   html {
     scroll-behavior: auto;
   }
+  
+  /* Badge reduced motion */
+  .hero-badge {
+    animation: none !important;
+    transition: none !important;
+  }
+  .hero-badge::before {
+    animation: none !important;
+  }
+  .badge-dot {
+    animation: none !important;
+  }
+  .badge-dot::after {
+    animation: none !important;
+  }
+  .hero-badge:hover {
+    transform: none !important;
+  }
 }
 
 /* ============================================================
@@ -2397,6 +2566,84 @@ ol {
     min-height: auto;
   }
 
+  .hero-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: var(--space-xl);
+    padding: var(--space-xl) 0;
+  }
+
+  .hero-visual {
+    order: 1;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .hero-content {
+    order: 2;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+  }
+
+  .hero-badge {
+    order: 1;
+    padding: 8px 18px 8px 16px;
+    font-size: 0.7rem;
+    gap: 10px;
+    margin-bottom: var(--space-md);
+  }
+
+  .badge-dot {
+    width: 8px;
+    height: 8px;
+  }
+  .badge-dot::after {
+    inset: -3px;
+  }
+
+  .hero-title {
+    order: 2;
+    font-size: clamp(2rem, 8vw, 3rem);
+    margin-bottom: var(--space-sm);
+  }
+
+  .hero-subtitle {
+    order: 3;
+    font-size: 1.1rem;
+    margin-bottom: var(--space-sm);
+  }
+
+  .hero-description {
+    order: 4;
+    font-size: 1rem;
+    max-width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: var(--space-md);
+  }
+
+  .hero-actions {
+    order: 5;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    gap: var(--space-sm);
+  }
+  .hero-actions .btn {
+    width: 100%;
+    max-width: 280px;
+    justify-content: center;
+  }
+
+  .hero-image-wrapper {
+    max-width: 220px;
+  }
+
   .mobile-toggle {
     display: flex;
   }
@@ -2434,10 +2681,6 @@ ol {
     margin-top: var(--space-md);
   }
 
-  .hero-title {
-    font-size: clamp(2rem, 8vw, 3rem);
-  }
-
   .grid-2,
   .grid-3,
   .grid-4 {
@@ -2457,10 +2700,60 @@ ol {
     flex-direction: column;
     align-items: center;
   }
+
+  /* Update floating animation for mobile */
+  @keyframes badgeFloat {
+    0%, 100% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-2px);
+    }
+  }
 }
 
 /* 480px - Mobile */
 @media (max-width: 480px) {
+  .hero-title {
+    font-size: 1.8rem;
+  }
+  .hero-greeting {
+    font-size: 0.5em;
+  }
+  .hero-subtitle {
+    font-size: 0.95rem;
+  }
+  .hero-description {
+    font-size: 0.9rem;
+  }
+  .hero-image-wrapper {
+    max-width: 180px;
+  }
+  
+  .hero-badge {
+    padding: 6px 14px 6px 12px;
+    font-size: 0.6rem;
+    gap: 8px;
+  }
+  .badge-dot {
+    width: 7px;
+    height: 7px;
+  }
+  .badge-dot::after {
+    inset: -2px;
+  }
+  
+  .hero-actions .btn {
+    max-width: 240px;
+    font-size: 0.8rem;
+    padding: var(--space-sm) var(--space-lg);
+  }
+  
+  .hero-container {
+    gap: var(--space-lg);
+    padding: var(--space-lg) 0;
+  }
+
   .hero-actions {
     flex-direction: column;
     align-items: center;
@@ -2468,26 +2761,6 @@ ol {
   .hero-actions .btn {
     width: 100%;
     max-width: 280px;
-  }
-
-  .hero-title {
-    font-size: 2rem;
-  }
-  .hero-greeting {
-    font-size: 0.5em;
-  }
-  .hero-subtitle {
-    font-size: 1rem;
-  }
-  .hero-description {
-    font-size: 0.95rem;
-  }
-  .hero-image-wrapper {
-    max-width: 240px;
-  }
-  .hero-badge {
-    font-size: 0.65rem;
-    padding: var(--space-xs) var(--space-md);
   }
 
   .timeline {
