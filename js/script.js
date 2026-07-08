@@ -929,32 +929,32 @@
       submitBtn.disabled = true;
 
       try {
-  // EmailJS configuration - ALL CORRECT NOW ✅
-  const response = await emailjs.send(
-    'portfolio_contact_form',  // ✅ Service ID
-    'template_54q6hun',        // ✅ Your correct Template ID
-    formData
-  );
+        // EmailJS configuration - ALL CORRECT NOW ✅
+        const response = await emailjs.send(
+          'portfolio_contact_form',  // ✅ Service ID
+          'template_54q6hun',        // ✅ Your correct Template ID
+          formData
+        );
 
-  console.log('✅ Email sent successfully:', response);
-  ContactForm.showMessage('Your message has been sent successfully! 🎉', 'success');
-  form.reset();
-  
-  // Clear validation states
-  inputs.forEach(input => {
-    input.dataset.valid = 'true';
-    input.style.borderColor = '';
-    const error = input.parentElement.querySelector('.field-error');
-    if (error) error.remove();
-  });
-} catch (error) {
-  console.error('❌ Email sending failed:', error);
-  ContactForm.showMessage('Failed to send message. Please try again.', 'error');
-} finally {
-  this.isSending = false;
-  submitBtn.innerHTML = originalText;
-  submitBtn.disabled = false;
-}
+        console.log('✅ Email sent successfully:', response);
+        ContactForm.showMessage('Your message has been sent successfully! 🎉', 'success');
+        form.reset();
+        
+        // Clear validation states
+        inputs.forEach(input => {
+          input.dataset.valid = 'true';
+          input.style.borderColor = '';
+          const error = input.parentElement.querySelector('.field-error');
+          if (error) error.remove();
+        });
+      } catch (error) {
+        console.error('❌ Email sending failed:', error);
+        ContactForm.showMessage('Failed to send message. Please try again.', 'error');
+      } finally {
+        this.isSending = false;
+        submitBtn.innerHTML = originalText;
+        submitBtn.disabled = false;
+      }
     }
   };
 
