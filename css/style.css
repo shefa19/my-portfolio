@@ -86,8 +86,7 @@
   --color-bg-alt: #f0f0f5;
   --color-bg-inverse: #1a1a2e;
 
-  /* Hero Background - Light Mode */
-  --color-hero-bg: #f8f8fc;
+  /* Hero Background - Light Mode (FIXED) */
   --color-hero-bg-start: #f0edff;
   --color-hero-bg-end: #f8f8fc;
 
@@ -103,9 +102,8 @@
   --color-text-inverse: #1a1a2e;
   
   /* Hero Text - Light Mode */
-  --color-hero-text: #1a1a2e;
-  --color-hero-text-secondary: #4a4a6a;
   --color-hero-heading: #1a1a2e;
+  --color-hero-text-secondary: #4a4a6a;
 
   /* Borders */
   --color-border: rgba(0, 0, 0, 0.08);
@@ -122,7 +120,7 @@
   --color-glass-border: rgba(255, 255, 255, 0.2);
   --color-glass-shadow: rgba(0, 0, 0, 0.04);
 
-  /* Gradient */
+  /* Gradients */
   --gradient-primary: linear-gradient(135deg, #6c5ce7, #a29bfe);
   --gradient-hero: linear-gradient(135deg, #f0edff 0%, #f8f8fc 100%);
 
@@ -158,7 +156,6 @@
   --color-bg-inverse: #f8f8fc;
 
   /* Hero Background - Dark Mode */
-  --color-hero-bg: #0f0f1a;
   --color-hero-bg-start: #0a0a14;
   --color-hero-bg-end: #1a1a2e;
 
@@ -172,9 +169,8 @@
   --color-text-inverse: #ffffff;
   
   /* Hero Text - Dark Mode */
-  --color-hero-text: #f0f0f5;
-  --color-hero-text-secondary: #b0b0c8;
   --color-hero-heading: #ffffff;
+  --color-hero-text-secondary: #b0b0c8;
 
   --color-border: rgba(255, 255, 255, 0.08);
   --color-border-light: rgba(255, 255, 255, 0.04);
@@ -554,7 +550,7 @@ ol {
 }
 
 /* ============================================================
-   10. HERO
+   10. HERO (FIXED)
    ============================================================ */
 .section-hero {
   min-height: 100vh;
@@ -726,6 +722,7 @@ ol {
   pointer-events: none;
 }
 
+/* Hero Title - FIXED */
 .hero-title {
   font-family: var(--font-display);
   font-size: clamp(2.5rem, 6vw, 4.5rem);
@@ -749,6 +746,7 @@ ol {
   transition: color var(--transition-smooth);
 }
 
+/* Hero Subtitle - FIXED */
 .hero-subtitle {
   font-size: clamp(1.1rem, 1.5vw, 1.5rem);
   font-weight: 500;
@@ -757,12 +755,12 @@ ol {
   transition: color var(--transition-smooth);
 }
 
+/* Hero Description - FIXED */
 .hero-description {
   font-size: 1.1rem;
   color: var(--color-hero-text-secondary);
   max-width: 480px;
   margin-bottom: var(--space-xl);
-  opacity: 0.85;
   transition: color var(--transition-smooth);
 }
 
