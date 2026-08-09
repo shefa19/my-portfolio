@@ -1,876 +1,1335 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-        <!-- Primary Meta Tags -->
-        <title>Shefaul Islam Shefa</title>
-        <meta name="description" content="I craft premium, accessible digital experiences with a focus on performance, thoughtful design, and meaningful user impact." />
-        <meta name="keywords" content="problem solver, front-end developer, web designer, digital designer, UI/UX accessibility" />
-        <meta name="author" content="Md. Shefaul Islam" />
-        <meta name="robots" content="index, follow" />
-        <link rel="canonical" href="https://sishefa19.github.io/portfolio/>" />
+    <!-- Primary Meta Tags -->
+    <title>Shefaul Islam Shefa</title>
+    <meta
+      name="description"
+      content="I build fast, scalable, secure, and high-performance web applications with a focus on clean code, thoughtful design, and seamless user experiences."
+    />
+    <meta
+      name="keywords"
+      content="Full Stack Developer, Web Developer, Software Developer, Front-End Developer, Back-End Developer, Web Application Developer, JavaScript Developer, UI/UX"
+    />
+    <meta name="author" content="Md. Shefaul Islam" />
+    <meta name="robots" content="index, follow" />
+    <link rel="canonical" href="https://sishefa19.github.io/portfolio/>" />
 
-        <!-- Open Graph / Social -->
-        <meta property="og:title" content="Shefaul Islam Shefa — Front-End Developer &amp; Digital Designer" />
-        <meta property="og:description" content="I build fast, accessible, and beautifully crafted digital experiences." />
-        <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://sishefa19.github.io/portfolio/" />
-        <meta property="og:image" content="<!-- TODO: Replace with your Open Graph image URL -->" />
+    <!-- Open Graph / Social -->
+    <meta
+      property="og:title"
+      content="Shefaul Islam Shefa — Full Stack Developer &amp; Problem Solver"
+    />
+    <meta
+      property="og:description"
+      content="I build fast, accessible, and beautifully crafted digital experiences."
+    />
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://sishefa19.github.io/portfolio/" />
+    <meta
+      property="og:image"
+      content="<!-- TODO: Replace with your Open Graph image URL -->"
+    />
 
-        <!-- Twitter Card -->
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content="Shefaul Islam Shefa" />
-        <meta name="twitter:description" content="I build fast, accessible, and beautifully crafted digital experiences.>" />
-        <meta name="twitter:image" content="https://x.com/sishefa19/photo" />
+    <!-- Twitter Card -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Shefaul Islam Shefa" />
+    <meta
+      name="twitter:description"
+      content="I build fast, accessible, and beautifully crafted digital experiences.>"
+    />
+    <meta name="twitter:image" content="https://x.com/sishefa19/photo" />
 
-        <!-- Theme Color -->
-        <meta name="theme-color" content="#0a0a0f" />
+    <!-- Theme Color -->
+    <meta name="theme-color" content="#0a0a0f" />
 
-        <!-- Favicon Placeholders -->
-        <link rel="icon" href="/favicon.ico" sizes="any" />
-        <link rel="icon" href="/icon.svg" type="image/svg+xml" />
-        <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <!-- Favicon Placeholders -->
+    <link rel="icon" href="/favicon.ico" sizes="any" />
+    <link rel="icon" href="/icon.svg" type="image/svg+xml" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
 
-        <!-- Preconnect for Performance -->
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <!-- Preconnect for Performance -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
 
-        <!-- Fonts -->
-        <!-- Font Awesome CDN -->
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
-        <link href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700&family=Syne:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+    <!-- Fonts -->
+    <!-- Font Awesome CDN -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,400;14..32,500;14..32,600;14..32,700&family=Syne:wght@400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
 
-        <!-- EmailJS -->
-        <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+    <!-- EmailJS -->
+    <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
 
-        <!-- CSS -->
-        <link rel="stylesheet" href="css/style.css" />
-    </head>
-    <body>
-        <!-- ============================================================
+    <!-- CSS -->
+    <link rel="stylesheet" href="css/style.css" />
+  </head>
+  <body>
+    <!-- ============================================================
         SKIP TO CONTENT
         ============================================================ -->
-        <a class="skip-link" href="#main-content">Skip to main content</a>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
 
-        <!-- ============================================================
+    <!-- ============================================================
         PRELOADER
         ============================================================ -->
-        <div id="preloader" role="status" aria-label="Loading">
-            <div class="preloader-inner">
-                <div class="preloader-brand">
-                    <span class="preloader-logo">SHEFAUL</span>
-                </div>
-                <div class="preloader-track">
-                    <div class="preloader-bar" id="preloaderBar"></div>
-                </div>
-                <p class="preloader-label">Loading&hellip;</p>
-            </div>
+    <div id="preloader" role="status" aria-label="Loading">
+      <div class="preloader-inner">
+        <div class="preloader-brand">
+          <span class="preloader-logo">SHEFAUL</span>
         </div>
+        <div class="preloader-track">
+          <div class="preloader-bar" id="preloaderBar"></div>
+        </div>
+        <p class="preloader-label">Loading&hellip;</p>
+      </div>
+    </div>
 
-        <!-- ============================================================
+    <!-- ============================================================
         CUSTOM CURSOR
         ============================================================ -->
-        <div class="cursor-wrapper" aria-hidden="true">
-            <div class="cursor-dot" id="cursorDot"></div>
-            <div class="cursor-ring" id="cursorRing"></div>
-        </div>
+    <div class="cursor-wrapper" aria-hidden="true">
+      <div class="cursor-dot" id="cursorDot"></div>
+      <div class="cursor-ring" id="cursorRing"></div>
+    </div>
 
-        <!-- ============================================================
+    <!-- ============================================================
         SCROLL PROGRESS
         ============================================================ -->
-        <div class="scroll-progress" aria-hidden="true">
-            <div class="scroll-progress-bar" id="scrollProgress"></div>
-        </div>
+    <div class="scroll-progress" aria-hidden="true">
+      <div class="scroll-progress-bar" id="scrollProgress"></div>
+    </div>
 
-        <!-- ============================================================
+    <!-- ============================================================
         BACKGROUND EFFECTS
         ============================================================ -->
-        <div class="bg-effects" aria-hidden="true">
-            <div class="bg-orb bg-orb-1"></div>
-            <div class="bg-orb bg-orb-2"></div>
-            <div class="bg-grid"></div>
-        </div>
+    <div class="bg-effects" aria-hidden="true">
+      <div class="bg-orb bg-orb-1"></div>
+      <div class="bg-orb bg-orb-2"></div>
+      <div class="bg-grid"></div>
+    </div>
 
-        <!-- ============================================================
+    <!-- ============================================================
         HEADER / NAVIGATION
         ============================================================ -->
-        <header class="site-header" id="siteHeader" role="banner" aria-label="Site header">
-            <div class="container header-container">
-                <div class="brand">
-                    <a href="#hero" aria-label="Shefaul Islam Shefa">
-                        <span class="brand-mark">SI</span>
-                        <span class="brand-name">SHEFA</span>
-                    </a>
-                </div>
-
-                <nav class="primary-nav" id="primaryNav" role="navigation" aria-label="Main navigation">
-                    <ul class="nav-list" role="list">
-                        <li class="nav-item"><a href="#hero" class="nav-link active" aria-current="page">Home</a></li>
-                        <li class="nav-item"><a href="#about" class="nav-link">About</a></li>
-                        <li class="nav-item"><a href="#projects" class="nav-link">Projects</a></li>
-                        <li class="nav-item"><a href="#experience" class="nav-link">Experience</a></li>
-                        <li class="nav-item"><a href="#education" class="nav-link">Education</a></li>
-                        <li class="nav-item"><a href="#skills" class="nav-link">Skills</a></li>
-                        <li class="nav-item"><a href="#certificates" class="nav-link">Certificates</a></li>
-                        <li class="nav-item"><a href="#contact" class="nav-link">Contact</a></li>
-                        <li class="nav-item">
-                            <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme">
-                                <span class="theme-icon" aria-hidden="true">🌙</span>
-                            </button>
-                        </li>
-                    </ul>
-                </nav>
-
-                <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="primaryNav">
-                    <span class="hamburger-line"></span>
-                    <span class="hamburger-line"></span>
-                    <span class="hamburger-line"></span>
-                </button>
-            </div>
-        </header>
-
-        <!-- ============================================================
-        MAIN CONTENT
-        ============================================================ -->
-        <main id="main-content" role="main">
-
-            <!-- ========== HERO ========== -->
-            <section id="hero" class="section-hero" aria-labelledby="heroTitle">
-                <div class="container hero-container">
-                    <div class="hero-visual" aria-hidden="true">
-                        <div class="hero-image-wrapper">
-                            <img class="hero-image" src="assets/images/profile.png" alt="Shefaul Islam Shefa" width="600" height="600" />
-                            <div class="hero-image-ring"></div>
-                        </div>
-                    </div>
-
-                    <div class="hero-content">
-                        <h1 id="heroTitle" class="hero-title">
-                            <span class="hero-greeting">Hi, I&rsquo;m</span>
-                            <span class="hero-name">Shefaul Islam Shefa</span>
-                        </h1>
-                        <p class="hero-subtitle">
-                            Front-End Developer with a design mindset.
-                        </p>
-                        <p class="hero-description">
-                            I build fast, accessible, and beautifully crafted digital experiences that people love.
-                        </p>
-                        <div class="hero-actions">
-                            <a href="#projects" class="btn btn-primary">
-                                View My Work
-                                <span aria-hidden="true">&rarr;</span>
-                            </a>
-                            <a href="#contact" class="btn btn-secondary">Get in Touch</a>
-                        </div>
-                    </div>
-
-                    <!-- Badge moved outside content, below profile image -->
-                    <p class="hero-badge">
-                        <span class="badge-dot" aria-hidden="true"></span>
-                        Available for opportunities
-                    </p>
-                </div>
-            </section>
-
-            <!-- ========== ABOUT ========== -->
-            <section id="about" class="section-about" aria-labelledby="aboutTitle">
-                <div class="container">
-                    <!-- Section Header - Enhanced -->
-                    <div class="about-header">
-                        <span class="section-eyebrow">About Me</span>
-                        <h2 id="aboutTitle" class="section-title">Designing digital experiences that <span class="text-gradient">matter</span>.</h2>
-                    </div>
-
-                    <!-- Profile & Bio Row -->
-                    <div class="about-profile-row">
-                        <!-- Profile Image -->
-                        <div class="about-profile-image">
-                            <div class="profile-image-wrapper">
-                                <img src="assets/images/about_profile.jpg" alt="Shefaul Islam Shefa" class="profile-image" />
-                                <div class="profile-image-ring"></div>
-                            </div>
-                        </div>
-
-                        <!-- Bio Content -->
-                        <div class="about-bio">
-                            <div class="bio-text">
-                                <p>
-                                    I'm Md. Shafaul Islam, a passionate Computer Science student and aspiring Front-End Developer with a keen eye for UI/UX Design. I enjoy designing and developing elegant, responsive, and high-performance web experiences that balance creativity, functionality, and exceptional user experience.
-                                </p>
-                                <p>
-                                    Beyond writing code, I focus on usability, accessibility, performance, and attention to detail. I believe every project is an opportunity to learn, innovate, and deliver high-quality solutions that leave a lasting impression. As I continue my journey, I am committed to expanding my technical expertise while building products that provide real value to users and clients.
-                                </p>
-                            </div>
-
-                            <!-- Quick Facts -->
-                            <div class="quick-facts">
-                                <div class="fact-item">
-                                    <span class="fact-icon" aria-hidden="true">👤</span>
-                                    <div class="fact-content">
-                                        <span class="fact-label">Full Name</span>
-                                        <span class="fact-value">Md. Shafaul Islam</span>
-                                    </div>
-                                </div>
-                                <div class="fact-item">
-                                    <span class="fact-icon" aria-hidden="true">📍</span>
-                                    <div class="fact-content">
-                                        <span class="fact-label">Location</span>
-                                        <span class="fact-value">Dhaka-1212, Bangladesh</span>
-                                    </div>
-                                </div>
-                                <div class="fact-item">
-                                    <span class="fact-icon" aria-hidden="true">🎓</span>
-                                    <div class="fact-content">
-                                        <span class="fact-label">Education</span>
-                                        <span class="fact-value">BSc in Computer Science & Engineering</span>
-                                    </div>
-                                </div>
-                                <div class="fact-item">
-                                    <span class="fact-icon" aria-hidden="true">💼</span>
-                                    <div class="fact-content">
-                                        <span class="fact-label">Experience</span>                                        
-                                        <span class="fact-value">3+ Years Professional</span>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <!-- CTA Actions -->
-                            <div class="about-actions">
-                                <a href="#contact" class="btn btn-primary">Let&rsquo;s Connect</a>
-                                <a href="assets/resume/Md_Shafaul_Islam.pdf" target="_blank" class="btn btn-secondary" download>
-                                    <span aria-hidden="true">📄</span> Download Resume
-                                </a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Core Values / Highlights -->
-                    <div class="about-values-section">
-                        <h3 class="values-title">What drives me</h3>
-                        <div class="about-highlights">
-                            <div class="highlight-card">
-                                <span class="highlight-icon" aria-hidden="true">🎯</span>
-                                <div class="highlight-content">
-                                    <h4 class="highlight-title">Mission-Driven</h4>
-                                    <p class="highlight-text">Building experiences that solve real problems.</p>
-                                </div>
-                            </div>
-                            <div class="highlight-card">
-                                <span class="highlight-icon" aria-hidden="true">⚡</span>
-                                <div class="highlight-content">
-                                    <h4 class="highlight-title">Performance-First</h4>
-                                    <p class="highlight-text">Fast, optimized, and responsive by default.</p>
-                                </div>
-                            </div>
-                            <div class="highlight-card">
-                                <span class="highlight-icon" aria-hidden="true">♿</span>
-                                <div class="highlight-content">
-                                    <h4 class="highlight-title">Accessibility Champion</h4>
-                                    <p class="highlight-text">Inclusive design for all users.</p>
-                                </div>
-                            </div>
-                            <div class="highlight-card">
-                                <span class="highlight-icon" aria-hidden="true">📐</span>
-                                <div class="highlight-content">
-                                    <h4 class="highlight-title">Design-Minded</h4>
-                                    <p class="highlight-text">Pixel-perfect implementation of beautiful designs.</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-
-                    <!-- Stats Section - Enhanced -->
-                    <div class="about-stats-container">
-                        <div class="stat-card premium">
-                            <span class="stat-number">3+</span>
-                            <span class="stat-label">Years of Experience</span>
-                            <span class="stat-description">Building professional projects</span>
-                        </div>
-                        <div class="stat-card premium">
-                            <span class="stat-number">3+</span>
-                            <span class="stat-label">Projects Delivered</span>
-                            <span class="stat-description">From concept to completion</span>
-                        </div>
-                        <div class="stat-card premium">
-                            <span class="stat-number">100%</span>
-                            <span class="stat-label">Client Satisfaction</span>
-                            <span class="stat-description">Positive feedback and referrals</span>
-                        </div>
-                        <div class="stat-card premium">
-                            <span class="stat-number">∞</span>
-                            <span class="stat-label">Growth Mindset</span>
-                            <span class="stat-description">Always learning and evolving</span>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <!-- ========== PROJECTS ========== -->
-            <section id="projects" class="section-projects" aria-labelledby="projectsTitle">
-                <div class="container">
-                    <div class="section-header">
-                        <span class="section-eyebrow">Portfolio</span>
-                        <h2 id="projectsTitle" class="section-title">Featured Projects</h2>
-                        <p class="section-description">
-                            A selection of my work demonstrating clean code, responsive design, and thoughtful user experience.
-                        </p>
-                    </div>
-
-                    <div class="projects-grid">
-                        <!-- Project 1: At-Taqwa -->
-                        <article class="project-card" aria-labelledby="project2Title">
-                            <div class="project-image">
-                                <img src="assets/project/At-Taqwa_Model_Madrasa.jpg" alt="At-Taqwa School Management System Dashboard" loading="lazy" width="600" height="400" />
-                                <span class="project-tag">School Management Web App</span>
-                            </div>
-                            <div class="project-content">
-                                <h3 id="project2Title" class="project-title">At-Taqwa School Management System</h3>
-                                <p class="project-description">
-                                    A powerful full-stack web application that digitally manages all academic and administrative operations of a school. Built with Firebase real-time technology, it ensures seamless data sync, role-based access, and automated reporting — making school management effortless and efficient.
-                                </p>
-                                <div class="project-tech">
-                                    <span class="tech-tag">React.js</span>
-                                    <span class="tech-tag">HTML</span>
-                                    <span class="tech-tag">Tailwind CSS</span>
-                                    <span class="tech-tag">Firebase</span>
-                                </div>
-                                <div class="project-links">
-                                    <a href="https://attaqwa.ai.studio/" target="_blank" rel="noopener noreferrer" class="project-link" aria-label="View live demo for At-Taqwa">Live Demo →</a>
-                                    <!--<a href="https://github.com/yourusername/at-taqwa-school-management" target="_blank" rel="noopener noreferrer" class="project-link" aria-label="View source code on GitHub">GitHub →</a>-->
-                                </div>
-                            </div>
-                        </article>
-
-                        <!-- Project 2: ShefaloBD E-Commerce -->
-                        <article class="project-card" aria-labelledby="project1Title">
-                            <div class="project-image">
-                                <img src="assets/project/shefaloBD_E-commerce.jpg" alt="Screenshot of ShefaloBD Premium E-Commerce Platform" loading="lazy" width="600" height="400" />
-                                <span class="project-tag">Full-Stack E-Commerce</span>
-                            </div>
-                            <div class="project-content">
-                                <h3 id="project1Title" class="project-title">ShefaloBD — Luxury Tech & Lifestyle Store</h3>
-                                <p class="project-description">
-                                    A high-performance full-stack e-commerce web application featuring live Firebase Firestore integration, secure role-based authentication, real-time inventory management, Bangladesh-specific delivery logic, verified customer reviews, and an interactive admin panel.
-                                </p>
-                                <div class="project-tech">
-                                    <span class="tech-tag">React 18</span>
-                                    <span class="tech-tag">TypeScript</span>
-                                    <span class="tech-tag">Tailwind CSS</span>
-                                    <span class="tech-tag">Firebase Firestore</span>
-                                    <span class="tech-tag">Firebase Auth</span>
-                                    <span class="tech-tag">Vite</span>
-                                </div>
-                                <div class="project-links">
-                                    <a href="https://shefalobd.ai.studio" target="_blank" class="project-link" aria-label="View live demo for ShefaloBD">Live Demo →</a>
-                                    <!--<a href="#" target="_blank" class="project-link" aria-label="View source code on GitHub">GitHub →</a>-->
-                                </div>
-                            </div>
-                        </article>
-
-                        <!-- Project 3: Mentor IT training institute -->
-                        <article class="project-card" aria-labelledby="project3Title">
-                            <div class="project-image">
-                                <img src="assets/project/Mentor_Institure.jpg" alt="Screenshot of MENTOR - IT Training & Student Management Portal" loading="lazy" width="600" height="400" />
-                                <span class="project-tag">Full Stack Web App</span>
-                            </div>
-                            <div class="project-content">
-                                <h3 id="project3Title" class="project-title">MENTOR - IT Training & Student Portal</h3>
-                                <p class="project-description">
-                                    An advanced IT training institute platform featuring interactive course enrollment, personalized student dashboards, live classroom video streaming, trainer management tools, a full-featured admin panel, and secure online fee payment verification — built for seamless online education.
-                                </p>
-                                <div class="project-tech">
-                                    <span class="tech-tag">React 18</span>
-                                    <span class="tech-tag">TypeScript</span>
-                                    <span class="tech-tag">Tailwind CSS</span>
-                                    <span class="tech-tag">Firebase</span>
-                                </div>
-                                <div class="project-links">
-                                    <a href="https://mentorbd.ai.studio/" target="_blank" class="project-link" aria-label="View live demo for MENTOR - IT Training & Student Management Portal">Live Demo →</a>
-                                    <!--<a href="#" target="_blank" class="project-link" aria-label="View source code on GitHub">GitHub →</a>-->
-                                </div>
-                            </div>
-                        </article>
-                    </div>
-
-                    <div class="projects-cta">
-                        <a href="#" class="btn btn-secondary">View All Projects</a>
-                    </div>
-                </div>
-            </section>
-
-            <!-- ========== EXPERIENCE ========== -->
-            <section id="experience" class="section-experience" aria-labelledby="experienceTitle">
-                <div class="container">
-                    <div class="section-header">
-                        <span class="section-eyebrow">Journey</span>
-                        <h2 id="experienceTitle" class="section-title">Professional Experience</h2>
-                        <p class="section-description">
-                            A timeline of my professional journey and key roles.
-                        </p>
-                    </div>
-
-                    <div class="timeline">
-                        <!-- Experience Item 1 -->
-                        <article class="timeline-item">
-                            <div class="timeline-dot" aria-hidden="true"></div>
-                            <div class="timeline-content">
-                                <span class="timeline-period">2024 &mdash; Present</span>
-
-                                <h3 class="timeline-title">Data Entry Specialist</h3>
-
-                                <p class="timeline-org">Data Mistri Team</p>
-
-                                <ul class="timeline-list">
-                                    <li>Working collaboratively on data entry and digital documentation projects.</li>
-
-                                    <li>Ensuring data accuracy, consistency, and timely project delivery.</li>
-
-                                    <li>Supporting team workflows through efficient data management and quality control.</li>
-                                </ul>
-                            </div>
-                        </article>
-
-                        <!-- Experience Item 2 -->
-                        <article class="timeline-item">
-                            <div class="timeline-dot" aria-hidden="true"></div>
-                            <div class="timeline-content">
-                                <span class="timeline-period">2021 &mdash; Present</span>
-
-                                <h3 class="timeline-title">Freelance Graphic Designer</h3>
-
-                                <p class="timeline-org">Fiverr • Freelancer.com</p>
-
-                                <ul class="timeline-list">
-                                    <li>Providing professional graphic design services to international clients since 2021.</li>
-
-                                    <li>Creating logos, social media creatives, branding materials, banners, and marketing assets.</li>
-
-                                    <li>Delivered high-quality designs with clear communication and on-time project completion.</li>
-                                </ul>
-                            </div>
-                        </article>
-                    </div>
-                </div>
-            </section>
-
-            <!-- ========== EDUCATION ========== -->
-            <section id="education" class="section-education" aria-labelledby="educationTitle">
-                <div class="container">
-                    <div class="section-header">
-                        <span class="section-eyebrow">Education</span>
-                        <h2 id="educationTitle" class="section-title">Academic Background</h2>
-                        <p class="section-description">
-                            My educational journey and academic achievements.
-                        </p>
-                    </div>
-                    <div class="education-grid">
-                        <!-- Education Item 1 - University -->
-                        <article class="education-card" style="background-image: url('assets/images/diu-campus.jpg');">
-                            <div class="education-card-overlay"></div>
-                            <div class="education-content">
-                                <div class="education-header">
-                                    <span class="education-period">2024 &mdash; Running</span>
-                                    <span class="education-badge">GPA: 3.67/4.0</span>
-                                </div>
-                                <h3 class="education-title">B.Sc. in Computer Science & Engineering</h3>
-                                <p class="education-institution">Dhaka International University</p>
-                                <p class="education-description">                                    
-                                    Focused on Full-Stack Development, Artificial Intelligence, UI/UX design and strengthening problem-solving skills
-                                </p>
-                            </div>
-                        </article>
-
-                        <!-- Education Item 2 - College -->
-                        <article class="education-card" style="background-image: url('assets/images/jessore-polytechnic.jpg');">
-                            <div class="education-card-overlay"></div>
-                            <div class="education-content">
-                                <div class="education-header">
-                                    <span class="education-period">2019 &mdash; 2023</span>
-                                    <span class="education-badge">GPA: 3.55/4.0</span>
-                                </div>
-                                <h3 class="education-title">Diploma in Engineering</h3>
-                                <p class="education-institution">Jessore Polytechnic Institute</p>
-                                <p class="education-description">            
-                                    Focused on Computer Technology, programming fundamentals, networking, database systems, and practical technical skills.
-                                </p>
-                            </div>
-                        </article>
-
-                        <!-- Education Item 3 - School -->
-                        <article class="education-card" style="background-image: url('assets/images/nilphamari-govt-high-school.jpg');">
-                            <div class="education-card-overlay"></div>
-                            <div class="education-content">
-                                <div class="education-header">
-                                    <span class="education-period">2014 &mdash; 2019</span>
-                                    <span class="education-badge">GPA: 4.44/5.0</span>
-                                </div>
-                                <h3 class="education-title">Secondary School Certificate</h3>
-                                <p class="education-institution">Nilphamari Govt. High School</p>
-                                <p class="education-description">
-                                    Strong foundation in science and mathematics with active participation in extracurricular activities.
-                                </p>
-                            </div>
-                        </article>
-                    </div>
-                </div>
-            </section>
-
-            <!-- ========== SKILLS ========== -->
-            <section id="skills" class="section-skills" aria-labelledby="skillsTitle">
-                <div class="container">
-                    <div class="section-header">
-                        <span class="section-eyebrow">Expertise</span>
-                        <h2 id="skillsTitle" class="section-title">My Skills &amp; Tools</h2>
-                        <p class="section-description">
-                            Technologies and disciplines I work with to create polished digital experiences.
-                        </p>
-                    </div>
-
-                    <div class="skills-grid">
-                        <!-- Category: Languages -->
-                        <div class="skill-category">
-                            <h3 class="skill-category-title">Languages</h3>
-                            <ul class="skill-list" aria-label="Programming languages">
-                                <li class="skill-item">
-                                    <span class="skill-name">HTML5</span>
-                                    <span class="skill-level" aria-label="Proficient">● ● ● ● ●</span>
-                                </li>
-                                <li class="skill-item">
-                                    <span class="skill-name">CSS3</span>
-                                    <span class="skill-level" aria-label="Proficient">● ● ● ● ○</span>
-                                </li>
-                                <li class="skill-item">
-                                    <span class="skill-name">JavaScript</span>
-                                    <span class="skill-level" aria-label="Proficient">● ● ● ● ○</span>
-                                </li>
-                                <li class="skill-item">
-                                    <span class="skill-name">Python</span>
-                                    <span class="skill-level" aria-label="Proficient">● ● ● ● ○</span>
-                                </li>
-                                <li class="skill-item">
-                                    <span class="skill-name">C & C++</span>
-                                    <span class="skill-level" aria-label="Proficient">● ● ● ● ○</span>
-                                </li>
-                            </ul>
-                        </div>
-
-                        <!-- Category: Frameworks -->
-                        <div class="skill-category">
-                            <h3 class="skill-category-title">Frameworks &amp; Libraries</h3>
-                            <ul class="skill-list" aria-label="Frameworks and libraries">
-                                <li class="skill-item">
-                                    <span class="skill-name">React</span>
-                                    <span class="skill-level" aria-label="Proficient">● ● ○ ○ ○</span>
-                                </li>
-                                <li class="skill-item">
-                                    <span class="skill-name">Tailwind CSS</span>
-                                    <span class="skill-level" aria-label="Proficient">● ● ○ ○ ○</span>
-                                </li>
-                                <li class="skill-item">
-                                    <span class="skill-name">Bootstrap</span>
-                                    <span class="skill-level" aria-label="Proficient">● ● ○ ○ ○</span>
-                                </li>
-                                <li class="skill-item">
-                                    <span class="skill-name">GSAP</span>
-                                    <span class="skill-level" aria-label="Proficient">● ● ○ ○ ○</span>
-                                </li>
-                                <li class="skill-item">
-                                    <span class="skill-name">Pandas</span>
-                                    <span class="skill-level" aria-label="Proficient">● ● ● ○ ○</span>
-                                </li>
-                            </ul>
-                        </div>
-
-                        <!-- Category: Tools -->
-                        <div class="skill-category">
-                            <h3 class="skill-category-title">Tools &amp; Platforms</h3>
-                            <ul class="skill-list" aria-label="Development tools">
-                                <li class="skill-item">
-                                    <span class="skill-name">Git &amp; GitHub</span>
-                                    <span class="skill-level" aria-label="Proficient">● ● ● ● ○</span>
-                                </li>
-                                <li class="skill-item">
-                                    <span class="skill-name">VS Code</span>
-                                    <span class="skill-level" aria-label="Proficient">● ● ● ● ●</span>
-                                </li>
-                                <li class="skill-item">
-                                    <span class="skill-name">Photoshop</span>
-                                    <span class="skill-level" aria-label="Proficient">● ● ● ● ○</span>
-                                </li>
-                                <li class="skill-item">
-                                    <span class="skill-name">XAMPP</span>
-                                    <span class="skill-level" aria-label="Proficient">● ● ● ● ●</span>
-                                </li>
-                                <li class="skill-item">
-                                    <span class="skill-name">Camtasia</span>
-                                    <span class="skill-level" aria-label="Proficient">● ● ● ● ○</span>
-                                </li>
-                            </ul>
-                        </div>
-
-                        <!-- Category: Design -->
-                        <div class="skill-category">
-                            <h3 class="skill-category-title">Microsoft Office</h3>
-                            <ul class="skill-list" aria-label="Design and UX skills">
-                                <li class="skill-item">
-                                    <span class="skill-name">Ms Word</span>
-                                    <span class="skill-level" aria-label="Expert">● ● ● ● ●</span>
-                                </li>
-
-                                <li class="skill-item">
-                                    <span class="skill-name">Ms Excel</span>
-                                    <span class="skill-level" aria-label="Expert">● ● ● ● ●</span>
-                                </li>
-
-                                <li class="skill-item">
-                                    <span class="skill-name">Ms PowerPoint</span>
-                                    <span class="skill-level" aria-label="Advanced">● ● ● ● ○</span>
-                                </li>
-
-                                <li class="skill-item">
-                                    <span class="skill-name">Data Entry</span>
-                                    <span class="skill-level" aria-label="Expert">● ● ● ● ●</span>
-                                </li>
-
-                                <li class="skill-item">
-                                    <span class="skill-name">Excel Analysis</span>
-                                    <span class="skill-level" aria-label="Advanced">● ● ● ● ○</span>
-                                </li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-            <!-- ========== CERTIFICATES ========== -->
-            <section id="certificates" class="section-certificates" aria-labelledby="certsTitle">
-                <div class="container">
-                    <div class="section-header">
-                        <span class="section-eyebrow">Learning</span>
-                        <h2 id="certsTitle" class="section-title">Certificates &amp; Achievements</h2>
-                        <p class="section-description">
-                            Courses and certifications that reflect my commitment to continuous growth.
-                        </p>
-                    </div>
-
-                    <div class="certificates-grid">
-                        <!-- Certificate 1 - Web Development -->
-                        <article class="certificate-card" style="background-image: url('assets/certificates/web-dev-certificate.jpg');">
-                            <div class="certificate-card-overlay"></div>
-                            
-                            <div class="cert-content">
-                                <h3 class="cert-title">Web Development</h3>
-                                <p class="cert-issuer">National Engineering Development Limited(NEDL)</p>
-                                <time class="cert-date" datetime="2023-07">Jul 2023</time>
-                                <a href="assets/certificates/certification_of_web_development.pdf" target="_blank" class="cert-link">Verify →</a>
-                            </div>
-                        </article>
-
-                        <!-- Certificate 2 - Graphic Design -->
-                        <article class="certificate-card" style="background-image: url('assets/certificates/graphic-design-certificate.jpg');">
-                            <div class="certificate-card-overlay"></div>
-                            <div class="cert-content">
-                                <h3 class="cert-title">Graphic Design</h3>
-                                <p class="cert-issuer">Jessore IT Institute</p>
-                                <time class="cert-date" datetime="2021-02">Feb 2021</time>
-                                <a href="assets/certificates/certification_of_graphic_design.pdf" target="_blank" class="cert-link">Verify →</a>
-                            </div>
-                        </article>
-
-                        <!-- Certificate 3 - AI Prompt Engineer -->
-                        <article class="certificate-card" style="background-image: url('assets/certificates/ai-prompt-certificate.jpg');">
-                            <div class="certificate-card-overlay"></div>
-                            <div class="cert-content">
-                                <h3 class="cert-title">AI Prompt Engineer Level 1™</h3>
-                                <p class="cert-issuer">AI CERTs™</p>
-                                <time class="cert-date" datetime="2025-06">Jun 2025</time>
-                                <a href="assets/certificates/Certification_of_prompt_engineering.pdf" target="_blank" class="cert-link">Verify →</a>
-                            </div>
-                        </article>
-
-                        <!-- Certificate 4 - C++ -->
-                        <article class="certificate-card" style="background-image: url('assets/certificates/cpp-certificate.jpg');">
-                            <div class="certificate-card-overlay"></div>
-                            <div class="cert-content">
-                                <h3 class="cert-title">The Fundamentals of C++ Programming Language</h3>
-                                <p class="cert-issuer">Phitron</p>
-                                <time class="cert-date" datetime="2025-02">Feb 2025</time>
-                                <a href="assets/certificates/certification_of_C++.pdf" target="_blank" class="cert-link">Verify →</a>
-                            </div>
-                        </article>
-                    </div>
-                </div>
-            </section>
-
-            <!-- ========== CONTACT ========== -->
-            <section id="contact" class="section-contact" aria-labelledby="contactTitle">
-                <div class="container">
-                    <div class="contact-wrapper">
-                        <div class="contact-header">
-                            <span class="section-eyebrow">Get in Touch</span>
-                            <h2 id="contactTitle" class="section-title">Let&rsquo;s work together.</h2>
-                            <p class="contact-description">
-                                I&rsquo;m currently looking for opportunities. If you have an interesting project or just want to say hello, I&rsquo;d love to hear from you.
-                            </p>
-                        </div>
-
-                        <div class="contact-grid">
-                            <div class="contact-info">
-                                <div class="contact-card">
-                                    <span class="contact-card-icon" aria-hidden="true">✉</span>
-                                    <div class="contact-card-content">
-                                        <h4 class="contact-card-label">Email</h4>                                        
-                                        <a href="mailto:sishefa19@gmail.com" class="contact-card-value">sishefa19@gmail.com</a>
-                                    </div>
-                                </div>
-
-                                <div class="contact-card">
-                                    <span class="contact-card-icon" aria-hidden="true">📍</span>
-                                    <div class="contact-card-content">
-                                        <h4 class="contact-card-label">Location</h4>
-                                        <span class="contact-card-value">Dhaka-1212, Bangladesh</span>
-                                    </div>
-                                </div>
-
-                                <div class="contact-card">
-                                    <span class="contact-card-icon" aria-hidden="true">📱</span>
-                                    <div class="contact-card-content">
-                                        <h4 class="contact-card-label">Phone</h4>
-                                        <a href="phn:+1234567890" class="contact-card-value">+880 9638611017</a>
-                                    </div>
-                                </div>
-
-                                <div class="contact-social">
-                                    <h4 class="contact-social-label">Find me online</h4>
-                                    <div class="social-links" style="justify-content: flex-start; gap: 15px;">
-                                        <a href="https://www.linkedin.com/in/sishefa19/" target="_blank" class="info-item reveal" style="padding: 12px; transition-delay: 0.8s;"><img src="https://cdn-icons-png.flaticon.com/512/174/174857.png" width="20" style="filter: invert(1);"></a>                                        
-                                        <a href="https://x.com/sishefa19" target="_blank" class="info-item reveal" style="padding: 12px; transition-delay: 1.0s;"><img src="https://cdn-icons-png.flaticon.com/512/733/733579.png" width="20" style="filter: invert(1);"></a>
-                                        <a href="https://www.instagram.com/si.shefa/" target="_blank" class="info-item reveal" style="padding: 12px; transition-delay: 0.9s;"><img src="https://cdn-icons-png.flaticon.com/512/174/174855.png" width="20" style="filter: invert(1);"></a>
-                                        <a href="https://www.facebook.com/sishefa19" target="_blank" class="info-item reveal" style="padding: 12px; transition-delay: 0.7s;"><img src="https://upload.wikimedia.org/wikipedia/en/thumb/0/04/Facebook_f_logo_%282021%29.svg/3840px-Facebook_f_logo_%282021%29.svg.png" width="20" style="filter: invert(1);"></a>
-                                        <a href="https://t.me/sishefa19" target="_blank" class="info-item reveal" style="padding: 12px; transition-delay: 0.7s;"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/Telegram_logo.svg/3840px-Telegram_logo.svg.png" width="20" style="filter: invert(1);"></a>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="contact-form-wrapper">
-                                <form class="contact-form" action="#" method="POST" novalidate>
-                                    <div class="form-group">
-                                        <label for="formName" class="form-label">Your Name</label>
-                                        <input type="text" id="formName" name="name" class="form-input" placeholder="Enter your name" required autocomplete="name" />
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="formEmail" class="form-label">Email Address</label>
-                                        <input type="email" id="formEmail" name="email" class="form-input" placeholder="you@example.com" required autocomplete="email" />
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="formSubject" class="form-label">Subject</label>
-                                        <input type="text" id="formSubject" name="subject" class="form-input" placeholder="What&rsquo;s this about?" />
-                                    </div>
-                                    <div class="form-group">
-                                        <label for="formMessage" class="form-label">Message</label>
-                                        <textarea id="formMessage" name="message" class="form-textarea" rows="5" placeholder="Tell me about your project or opportunity..." required></textarea>
-                                    </div>
-                                    <button type="submit" class="btn btn-primary btn-full">Send Message <span aria-hidden="true">→</span></button>
-                                </form>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </section>
-
-        </main>
-
-        <!-- ============================================================
-        FOOTER
-        ============================================================ -->
-        <footer class="site-footer" role="contentinfo" aria-label="Site footer">
-            <div class="container">
-                <div class="footer-grid">
-                    <div class="footer-brand">
-                        <p class="footer-name">Shefaul Islam Shefa</p>
-                        <p class="footer-tagline">Front-End Developer &amp; Digital Designer</p>
-                        <p class="footer-copy">
-                            &copy; <span id="currentYear">2025</span> — All rights reserved.
-                        </p>
-                    </div>
-
-                    <div class="footer-contact">
-                        <div class="footer-contact-item">
-                            <span class="footer-contact-icon" aria-hidden="true">✉</span>
-                            <a href="mailto:sishefa19@gmail.com" class="footer-contact-link">sishefa19@gmail.com</a>
-                        </div>
-                        <div class="footer-contact-item">
-                            <span class="footer-contact-icon" aria-hidden="true">📍</span>
-                            <span class="footer-contact-text">Dhaka-1212, Bangladesh</span>
-                        </div>
-                        <div class="footer-contact-item">
-                            <span class="footer-contact-icon" aria-hidden="true">📱</span>
-                            <a href="phn:+8809638611017" class="footer-contact-link">+880 9638611017</a>
-                        </div>
-                    </div>
-
-                    <div class="footer-social">
-                        <h4 class="footer-social-label">Connect</h4>
-                        <div class="footer-social-links">
-                            <a href="https://github.com/shefa19" class="footer-social-link" aria-label="GitHub" target="_blank" rel="noopener noreferrer">
-                                <i class="fab fa-github" aria-hidden="true"></i>
-                            </a>
-                            <a href="https://www.linkedin.com/in/sishefa19/" class="footer-social-link" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer">
-                                <i class="fab fa-linkedin-in" aria-hidden="true"></i>
-                            </a>
-                            <a href="https://x.com/sishefa19" class="footer-social-link" aria-label="Twitter" target="_blank" rel="noopener noreferrer">
-                                <i class="fab fa-twitter" aria-hidden="true"></i>
-                            </a>
-                            <a href="https://www.behance.net/shefaulislam" class="footer-social-link" aria-label="Behance" target="_blank" rel="noopener noreferrer">
-                                <i class="fab fa-behance" aria-hidden="true"></i>
-                            </a>
-                            <a href="https://www.facebook.com/sishefa19" class="footer-social-link" aria-label="Facebook" target="_blank" rel="noopener noreferrer">
-                                <i class="fab fa-facebook-f" aria-hidden="true"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="footer-bottom">
-                    <p class="footer-credit">
-                        Designed &amp; Developed by
-                        <span class="credit-name">Shefaul Islam Shefa</span>
-                        <span class="heart-icon" aria-hidden="true">❤</span>
-                    </p>
-                </div>
-            </div>
-        </footer>
-
-        <!-- ============================================================
-        BACK TO TOP BUTTON
-        ============================================================ -->
-        <button class="back-to-top" id="backToTop" aria-label="Back to top">
-            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
-                <polyline points="18 15 12 9 6 15"></polyline>
-            </svg>
-        </button>
-
-        <!-- ============================================================
-        MODAL PLACEHOLDERS
-        ============================================================ -->
-        <div class="modal" id="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle" hidden>
-            <div class="modal-overlay" id="modalOverlay"></div>
-            <div class="modal-content">
-                <button class="modal-close" id="modalClose" aria-label="Close modal">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-                <div class="modal-body" id="modalBody">
-                    <h2 id="modalTitle">Modal Title</h2>
-                    <p>Modal content goes here.</p>
-                </div>
-            </div>
+    <header
+      class="site-header"
+      id="siteHeader"
+      role="banner"
+      aria-label="Site header"
+    >
+      <div class="container header-container">
+        <div class="brand">
+          <a href="#hero" aria-label="Shefaul Islam Shefa">
+            <span class="brand-mark">SI</span>
+            <span class="brand-name">SHEFA</span>
+          </a>
         </div>
 
-        <!-- ============================================================
+        <nav
+          class="primary-nav"
+          id="primaryNav"
+          role="navigation"
+          aria-label="Main navigation"
+        >
+          <ul class="nav-list" role="list">
+            <li class="nav-item">
+              <a href="#hero" class="nav-link active" aria-current="page"
+                >Home</a
+              >
+            </li>
+            <li class="nav-item">
+              <a href="#about" class="nav-link">About</a>
+            </li>
+            <li class="nav-item">
+              <a href="#projects" class="nav-link">Projects</a>
+            </li>
+            <li class="nav-item">
+              <a href="#experience" class="nav-link">Experience</a>
+            </li>
+            <li class="nav-item">
+              <a href="#education" class="nav-link">Education</a>
+            </li>
+            <li class="nav-item">
+              <a href="#skills" class="nav-link">Skills</a>
+            </li>
+            <li class="nav-item">
+              <a href="#certificates" class="nav-link">Certificates</a>
+            </li>
+            <li class="nav-item">
+              <a href="#contact" class="nav-link">Contact</a>
+            </li>
+            <li class="nav-item">
+              <button
+                class="theme-toggle"
+                id="themeToggle"
+                aria-label="Toggle theme"
+              >
+                <span class="theme-icon" aria-hidden="true">🌙</span>
+              </button>
+            </li>
+          </ul>
+        </nav>
+
+        <button
+          class="mobile-toggle"
+          id="mobileToggle"
+          aria-label="Toggle navigation menu"
+          aria-expanded="false"
+          aria-controls="primaryNav"
+        >
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+          <span class="hamburger-line"></span>
+        </button>
+      </div>
+    </header>
+
+    <!-- ============================================================
+        MAIN CONTENT
+        ============================================================ -->
+    <main id="main-content" role="main">
+      <!-- ========== HERO ========== -->
+      <section id="hero" class="section-hero" aria-labelledby="heroTitle">
+        <div class="container hero-container">
+          <div class="hero-visual" aria-hidden="true">
+            <div class="hero-image-wrapper">
+              <img
+                class="hero-image"
+                src="assets/images/profile.png"
+                alt="Shefaul Islam Shefa"
+                width="600"
+                height="600"
+              />
+              <div class="hero-image-ring"></div>
+            </div>
+          </div>
+
+          <div class="hero-content">
+            <h1 id="heroTitle" class="hero-title">
+              <span class="hero-greeting">Hi, I&rsquo;m</span>
+              <span class="hero-name">Shefaul Islam Shefa</span>
+            </h1>
+            <p class="hero-subtitle">
+              Full Stack Developer with a problem-solving mindset.
+            </p>
+            <p class="hero-description">
+              I build fast, scalable, secure, and beautifully crafted web
+              applications that deliver seamless digital experiences.
+            </p>
+            <div class="hero-actions">
+              <a href="#projects" class="btn btn-primary">
+                View My Work
+                <span aria-hidden="true">&rarr;</span>
+              </a>
+              <a href="#contact" class="btn btn-secondary">Get in Touch</a>
+            </div>
+          </div>
+
+          <!-- Badge moved outside content, below profile image -->
+          <p class="hero-badge">
+            <span class="badge-dot" aria-hidden="true"></span>
+            Available for opportunities
+          </p>
+        </div>
+      </section>
+
+      <!-- ========== ABOUT ========== -->
+      <section id="about" class="section-about" aria-labelledby="aboutTitle">
+        <div class="container">
+          <!-- Section Header - Enhanced -->
+          <div class="about-header">
+            <span class="section-eyebrow">About Me</span>
+            <h2 id="aboutTitle" class="section-title">
+              Building scalable solutions that
+              <span class="text-gradient">solve real problems</span>.
+            </h2>
+          </div>
+
+          <!-- Profile & Bio Row -->
+          <div class="about-profile-row">
+            <!-- Profile Image -->
+            <div class="about-profile-image">
+              <div class="profile-image-wrapper">
+                <img
+                  src="assets/images/about_profile.jpg"
+                  alt="Shefaul Islam Shefa"
+                  class="profile-image"
+                />
+                <div class="profile-image-ring"></div>
+              </div>
+            </div>
+
+            <!-- Bio Content -->
+            <div class="about-bio">
+              <div class="bio-text">
+                <p>
+                  I'm Md. Shafaul Islam, a passionate Computer Science student
+                  and aspiring Full Stack Developer with a strong interest in
+                  building modern, scalable, and high-performance web
+                  applications. I enjoy turning ideas into functional digital
+                  solutions by combining clean code, thoughtful design, and
+                  seamless user experiences.
+                </p>
+                <p>
+                  Beyond writing code, I focus on performance, security,
+                  scalability, accessibility, and attention to detail. I believe
+                  every project is an opportunity to solve real-world problems,
+                  learn new technologies, and deliver reliable solutions that
+                  create meaningful value. As I continue my journey, I am
+                  committed to expanding my expertise across both front-end and
+                  back-end development while building innovative products that
+                  make a real impact.
+                </p>
+              </div>
+
+              <!-- Quick Facts -->
+              <div class="quick-facts">
+                <div class="fact-item">
+                  <span class="fact-icon" aria-hidden="true">👤</span>
+                  <div class="fact-content">
+                    <span class="fact-label">Full Name</span>
+                    <span class="fact-value">Md. Shafaul Islam</span>
+                  </div>
+                </div>
+                <div class="fact-item">
+                  <span class="fact-icon" aria-hidden="true">📍</span>
+                  <div class="fact-content">
+                    <span class="fact-label">Location</span>
+                    <span class="fact-value">Dhaka-1212, Bangladesh</span>
+                  </div>
+                </div>
+                <div class="fact-item">
+                  <span class="fact-icon" aria-hidden="true">🎓</span>
+                  <div class="fact-content">
+                    <span class="fact-label">Education</span>
+                    <span class="fact-value"
+                      >BSc in Computer Science & Engineering</span
+                    >
+                  </div>
+                </div>
+                <div class="fact-item">
+                  <span class="fact-icon" aria-hidden="true">💼</span>
+                  <div class="fact-content">
+                    <span class="fact-label">Experience</span>
+                    <span class="fact-value">3+ Years Professional</span>
+                  </div>
+                </div>
+              </div>
+
+              <!-- CTA Actions -->
+              <div class="about-actions">
+                <a href="#contact" class="btn btn-primary"
+                  >Let&rsquo;s Connect</a
+                >
+                <a
+                  href="assets/resume/Md_Shafaul_Islam.pdf"
+                  target="_blank"
+                  class="btn btn-secondary"
+                  download
+                >
+                  <span aria-hidden="true">📄</span> Download Resume
+                </a>
+              </div>
+            </div>
+          </div>
+
+          <!-- Core Values / Highlights -->
+          <div class="about-values-section">
+            <h3 class="values-title">What drives me</h3>
+            <div class="about-highlights">
+              <div class="highlight-card">
+                <span class="highlight-icon" aria-hidden="true">🎯</span>
+                <div class="highlight-content">
+                  <h4 class="highlight-title">Mission-Driven</h4>
+                  <p class="highlight-text">
+                    Building experiences that solve real problems.
+                  </p>
+                </div>
+              </div>
+              <div class="highlight-card">
+                <span class="highlight-icon" aria-hidden="true">⚡</span>
+                <div class="highlight-content">
+                  <h4 class="highlight-title">Performance-First</h4>
+                  <p class="highlight-text">
+                    Fast, optimized, and responsive by default.
+                  </p>
+                </div>
+              </div>
+              <div class="highlight-card">
+                <span class="highlight-icon" aria-hidden="true">♿</span>
+                <div class="highlight-content">
+                  <h4 class="highlight-title">Accessibility Champion</h4>
+                  <p class="highlight-text">Inclusive design for all users.</p>
+                </div>
+              </div>
+              <div class="highlight-card">
+                <span class="highlight-icon" aria-hidden="true">📐</span>
+                <div class="highlight-content">
+                  <h4 class="highlight-title">Design-Minded</h4>
+                  <p class="highlight-text">
+                    Pixel-perfect implementation of beautiful designs.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Stats Section - Enhanced -->
+          <div class="about-stats-container">
+            <div class="stat-card premium">
+              <span class="stat-number">3+</span>
+              <span class="stat-label">Years of Experience</span>
+              <span class="stat-description"
+                >Building professional projects</span
+              >
+            </div>
+            <div class="stat-card premium">
+              <span class="stat-number">3+</span>
+              <span class="stat-label">Projects Delivered</span>
+              <span class="stat-description">From concept to completion</span>
+            </div>
+            <div class="stat-card premium">
+              <span class="stat-number">100%</span>
+              <span class="stat-label">Client Satisfaction</span>
+              <span class="stat-description"
+                >Positive feedback and referrals</span
+              >
+            </div>
+            <div class="stat-card premium">
+              <span class="stat-number">∞</span>
+              <span class="stat-label">Growth Mindset</span>
+              <span class="stat-description">Always learning and evolving</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ========== PROJECTS ========== -->
+      <section
+        id="projects"
+        class="section-projects"
+        aria-labelledby="projectsTitle"
+      >
+        <div class="container">
+          <div class="section-header">
+            <span class="section-eyebrow">Portfolio</span>
+            <h2 id="projectsTitle" class="section-title">Featured Projects</h2>
+            <p class="section-description">
+              A selection of my work demonstrating clean code, responsive
+              design, and thoughtful user experience.
+            </p>
+          </div>
+
+          <div class="projects-grid">
+            <!-- Project 1: At-Taqwa -->
+            <article class="project-card" aria-labelledby="project2Title">
+              <div class="project-image">
+                <img
+                  src="assets/project/At-Taqwa_Model_Madrasa.jpg"
+                  alt="At-Taqwa School Management System Dashboard"
+                  loading="lazy"
+                  width="600"
+                  height="400"
+                />
+                <span class="project-tag">School Management Web App</span>
+              </div>
+              <div class="project-content">
+                <h3 id="project2Title" class="project-title">
+                  At-Taqwa School Management System
+                </h3>
+                <p class="project-description">
+                  A powerful full-stack web application that digitally manages
+                  all academic and administrative operations of a school. Built
+                  with Firebase real-time technology, it ensures seamless data
+                  sync, role-based access, and automated reporting — making
+                  school management effortless and efficient.
+                </p>
+                <div class="project-tech">
+                  <span class="tech-tag">React.js</span>
+                  <span class="tech-tag">HTML</span>
+                  <span class="tech-tag">Tailwind CSS</span>
+                  <span class="tech-tag">Firebase</span>
+                </div>
+                <div class="project-links">
+                  <a
+                    href="https://attaqwa.ai.studio/"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="project-link"
+                    aria-label="View live demo for At-Taqwa"
+                    >Live Demo →</a
+                  >
+                  <!--<a href="https://github.com/yourusername/at-taqwa-school-management" target="_blank" rel="noopener noreferrer" class="project-link" aria-label="View source code on GitHub">GitHub →</a>-->
+                </div>
+              </div>
+            </article>
+
+            <!-- Project 2: ShefaloBD E-Commerce -->
+            <article class="project-card" aria-labelledby="project1Title">
+              <div class="project-image">
+                <img
+                  src="assets/project/shefaloBD_E-commerce.jpg"
+                  alt="Screenshot of ShefaloBD Premium E-Commerce Platform"
+                  loading="lazy"
+                  width="600"
+                  height="400"
+                />
+                <span class="project-tag">Full-Stack E-Commerce</span>
+              </div>
+              <div class="project-content">
+                <h3 id="project1Title" class="project-title">
+                  ShefaloBD — Luxury Tech & Lifestyle Store
+                </h3>
+                <p class="project-description">
+                  A high-performance full-stack e-commerce web application
+                  featuring live Firebase Firestore integration, secure
+                  role-based authentication, real-time inventory management,
+                  Bangladesh-specific delivery logic, verified customer reviews,
+                  and an interactive admin panel.
+                </p>
+                <div class="project-tech">
+                  <span class="tech-tag">React 18</span>
+                  <span class="tech-tag">TypeScript</span>
+                  <span class="tech-tag">Tailwind CSS</span>
+                  <span class="tech-tag">Firebase Firestore</span>
+                  <span class="tech-tag">Firebase Auth</span>
+                  <span class="tech-tag">Vite</span>
+                </div>
+                <div class="project-links">
+                  <a
+                    href="https://shefalobd.ai.studio"
+                    target="_blank"
+                    class="project-link"
+                    aria-label="View live demo for ShefaloBD"
+                    >Live Demo →</a
+                  >
+                  <!--<a href="#" target="_blank" class="project-link" aria-label="View source code on GitHub">GitHub →</a>-->
+                </div>
+              </div>
+            </article>
+
+            <!-- Project 3: Mentor IT training institute -->
+            <article class="project-card" aria-labelledby="project3Title">
+              <div class="project-image">
+                <img
+                  src="assets/project/Mentor_Institure.jpg"
+                  alt="Screenshot of MENTOR - IT Training & Student Management Portal"
+                  loading="lazy"
+                  width="600"
+                  height="400"
+                />
+                <span class="project-tag">Full Stack Web App</span>
+              </div>
+              <div class="project-content">
+                <h3 id="project3Title" class="project-title">
+                  MENTOR - IT Training & Student Portal
+                </h3>
+                <p class="project-description">
+                  An advanced IT training institute platform featuring
+                  interactive course enrollment, personalized student
+                  dashboards, live classroom video streaming, trainer management
+                  tools, a full-featured admin panel, and secure online fee
+                  payment verification — built for seamless online education.
+                </p>
+                <div class="project-tech">
+                  <span class="tech-tag">React 18</span>
+                  <span class="tech-tag">TypeScript</span>
+                  <span class="tech-tag">Tailwind CSS</span>
+                  <span class="tech-tag">Firebase</span>
+                </div>
+                <div class="project-links">
+                  <a
+                    href="https://mentorbd.ai.studio/"
+                    target="_blank"
+                    class="project-link"
+                    aria-label="View live demo for MENTOR - IT Training & Student Management Portal"
+                    >Live Demo →</a
+                  >
+                  <!--<a href="#" target="_blank" class="project-link" aria-label="View source code on GitHub">GitHub →</a>-->
+                </div>
+              </div>
+            </article>
+          </div>
+
+          <div class="projects-cta">
+            <a href="#" class="btn btn-secondary">View All Projects</a>
+          </div>
+        </div>
+      </section>
+
+      <!-- ========== EXPERIENCE ========== -->
+      <section
+        id="experience"
+        class="section-experience"
+        aria-labelledby="experienceTitle"
+      >
+        <div class="container">
+          <div class="section-header">
+            <span class="section-eyebrow">Journey</span>
+            <h2 id="experienceTitle" class="section-title">
+              Professional Experience
+            </h2>
+            <p class="section-description">
+              A timeline of my professional journey and key roles.
+            </p>
+          </div>
+
+          <div class="timeline">
+            <!-- Experience Item 1 -->
+            <article class="timeline-item">
+              <div class="timeline-dot" aria-hidden="true"></div>
+              <div class="timeline-content">
+                <span class="timeline-period">2024 &mdash; Present</span>
+
+                <h3 class="timeline-title">Data Entry Specialist</h3>
+
+                <p class="timeline-org">Data Mistri Team</p>
+
+                <ul class="timeline-list">
+                  <li>
+                    Working collaboratively on data entry and digital
+                    documentation projects.
+                  </li>
+
+                  <li>
+                    Ensuring data accuracy, consistency, and timely project
+                    delivery.
+                  </li>
+
+                  <li>
+                    Supporting team workflows through efficient data management
+                    and quality control.
+                  </li>
+                </ul>
+              </div>
+            </article>
+
+            <!-- Experience Item 2 -->
+            <article class="timeline-item">
+              <div class="timeline-dot" aria-hidden="true"></div>
+              <div class="timeline-content">
+                <span class="timeline-period">2021 &mdash; Present</span>
+
+                <h3 class="timeline-title">Freelance Graphic Designer</h3>
+
+                <p class="timeline-org">Fiverr • Freelancer.com</p>
+
+                <ul class="timeline-list">
+                  <li>
+                    Providing professional graphic design services to
+                    international clients since 2021.
+                  </li>
+
+                  <li>
+                    Creating logos, social media creatives, branding materials,
+                    banners, and marketing assets.
+                  </li>
+
+                  <li>
+                    Delivered high-quality designs with clear communication and
+                    on-time project completion.
+                  </li>
+                </ul>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- ========== EDUCATION ========== -->
+      <section
+        id="education"
+        class="section-education"
+        aria-labelledby="educationTitle"
+      >
+        <div class="container">
+          <div class="section-header">
+            <span class="section-eyebrow">Education</span>
+            <h2 id="educationTitle" class="section-title">
+              Academic Background
+            </h2>
+            <p class="section-description">
+              My educational journey and academic achievements.
+            </p>
+          </div>
+          <div class="education-grid">
+            <!-- Education Item 1 - University -->
+            <article
+              class="education-card"
+              style="
+                background-image: url(&quot;assets/images/diu-campus.jpg&quot;);
+              "
+            >
+              <div class="education-card-overlay"></div>
+              <div class="education-content">
+                <div class="education-header">
+                  <span class="education-period">2024 &mdash; Running</span>
+                  <span class="education-badge">GPA: 3.67/4.0</span>
+                </div>
+                <h3 class="education-title">
+                  B.Sc. in Computer Science & Engineering
+                </h3>
+                <p class="education-institution">
+                  Dhaka International University
+                </p>
+                <p class="education-description">
+                  Focused on Full-Stack Development, Artificial Intelligence,
+                  UI/UX design and strengthening problem-solving skills
+                </p>
+              </div>
+            </article>
+
+            <!-- Education Item 2 - College -->
+            <article
+              class="education-card"
+              style="
+                background-image: url(&quot;assets/images/jessore-polytechnic.jpg&quot;);
+              "
+            >
+              <div class="education-card-overlay"></div>
+              <div class="education-content">
+                <div class="education-header">
+                  <span class="education-period">2019 &mdash; 2023</span>
+                  <span class="education-badge">GPA: 3.55/4.0</span>
+                </div>
+                <h3 class="education-title">Diploma in Engineering</h3>
+                <p class="education-institution">
+                  Jessore Polytechnic Institute
+                </p>
+                <p class="education-description">
+                  Focused on Computer Technology, programming fundamentals,
+                  networking, database systems, and practical technical skills.
+                </p>
+              </div>
+            </article>
+
+            <!-- Education Item 3 - School -->
+            <article
+              class="education-card"
+              style="
+                background-image: url(&quot;assets/images/nilphamari-govt-high-school.jpg&quot;);
+              "
+            >
+              <div class="education-card-overlay"></div>
+              <div class="education-content">
+                <div class="education-header">
+                  <span class="education-period">2014 &mdash; 2019</span>
+                  <span class="education-badge">GPA: 4.44/5.0</span>
+                </div>
+                <h3 class="education-title">Secondary School Certificate</h3>
+                <p class="education-institution">
+                  Nilphamari Govt. High School
+                </p>
+                <p class="education-description">
+                  Strong foundation in science and mathematics with active
+                  participation in extracurricular activities.
+                </p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- ========== SKILLS ========== -->
+      <section id="skills" class="section-skills" aria-labelledby="skillsTitle">
+        <div class="container">
+          <div class="section-header">
+            <span class="section-eyebrow">Expertise</span>
+            <h2 id="skillsTitle" class="section-title">
+              My Skills &amp; Tools
+            </h2>
+            <p class="section-description">
+              Technologies and disciplines I work with to create polished
+              digital experiences.
+            </p>
+          </div>
+
+          <div class="skills-grid">
+            <!-- Category: Languages -->
+            <div class="skill-category">
+              <h3 class="skill-category-title">Languages</h3>
+              <ul class="skill-list" aria-label="Programming languages">
+                <li class="skill-item">
+                  <span class="skill-name">HTML5</span>
+                  <span class="skill-level" aria-label="Proficient"
+                    >● ● ● ● ●</span
+                  >
+                </li>
+                <li class="skill-item">
+                  <span class="skill-name">CSS3</span>
+                  <span class="skill-level" aria-label="Proficient"
+                    >● ● ● ● ○</span
+                  >
+                </li>
+                <li class="skill-item">
+                  <span class="skill-name">JavaScript</span>
+                  <span class="skill-level" aria-label="Proficient"
+                    >● ● ● ● ○</span
+                  >
+                </li>
+                <li class="skill-item">
+                  <span class="skill-name">Python</span>
+                  <span class="skill-level" aria-label="Proficient"
+                    >● ● ● ● ○</span
+                  >
+                </li>
+                <li class="skill-item">
+                  <span class="skill-name">C & C++</span>
+                  <span class="skill-level" aria-label="Proficient"
+                    >● ● ● ● ○</span
+                  >
+                </li>
+              </ul>
+            </div>
+
+            <!-- Category: Frameworks -->
+            <div class="skill-category">
+              <h3 class="skill-category-title">Frameworks &amp; Libraries</h3>
+              <ul class="skill-list" aria-label="Frameworks and libraries">
+                <li class="skill-item">
+                  <span class="skill-name">React</span>
+                  <span class="skill-level" aria-label="Proficient"
+                    >● ● ○ ○ ○</span
+                  >
+                </li>
+                <li class="skill-item">
+                  <span class="skill-name">Tailwind CSS</span>
+                  <span class="skill-level" aria-label="Proficient"
+                    >● ● ○ ○ ○</span
+                  >
+                </li>
+                <li class="skill-item">
+                  <span class="skill-name">Bootstrap</span>
+                  <span class="skill-level" aria-label="Proficient"
+                    >● ● ○ ○ ○</span
+                  >
+                </li>
+                <li class="skill-item">
+                  <span class="skill-name">GSAP</span>
+                  <span class="skill-level" aria-label="Proficient"
+                    >● ● ○ ○ ○</span
+                  >
+                </li>
+                <li class="skill-item">
+                  <span class="skill-name">Pandas</span>
+                  <span class="skill-level" aria-label="Proficient"
+                    >● ● ● ○ ○</span
+                  >
+                </li>
+              </ul>
+            </div>
+
+            <!-- Category: Tools -->
+            <div class="skill-category">
+              <h3 class="skill-category-title">Tools &amp; Platforms</h3>
+              <ul class="skill-list" aria-label="Development tools">
+                <li class="skill-item">
+                  <span class="skill-name">Git &amp; GitHub</span>
+                  <span class="skill-level" aria-label="Proficient"
+                    >● ● ● ● ○</span
+                  >
+                </li>
+                <li class="skill-item">
+                  <span class="skill-name">VS Code</span>
+                  <span class="skill-level" aria-label="Proficient"
+                    >● ● ● ● ●</span
+                  >
+                </li>
+                <li class="skill-item">
+                  <span class="skill-name">Photoshop</span>
+                  <span class="skill-level" aria-label="Proficient"
+                    >● ● ● ● ○</span
+                  >
+                </li>
+                <li class="skill-item">
+                  <span class="skill-name">XAMPP</span>
+                  <span class="skill-level" aria-label="Proficient"
+                    >● ● ● ● ●</span
+                  >
+                </li>
+                <li class="skill-item">
+                  <span class="skill-name">Camtasia</span>
+                  <span class="skill-level" aria-label="Proficient"
+                    >● ● ● ● ○</span
+                  >
+                </li>
+              </ul>
+            </div>
+
+            <!-- Category: Design -->
+            <div class="skill-category">
+              <h3 class="skill-category-title">Microsoft Office</h3>
+              <ul class="skill-list" aria-label="Design and UX skills">
+                <li class="skill-item">
+                  <span class="skill-name">Ms Word</span>
+                  <span class="skill-level" aria-label="Expert">● ● ● ● ●</span>
+                </li>
+
+                <li class="skill-item">
+                  <span class="skill-name">Ms Excel</span>
+                  <span class="skill-level" aria-label="Expert">● ● ● ● ●</span>
+                </li>
+
+                <li class="skill-item">
+                  <span class="skill-name">Ms PowerPoint</span>
+                  <span class="skill-level" aria-label="Advanced"
+                    >● ● ● ● ○</span
+                  >
+                </li>
+
+                <li class="skill-item">
+                  <span class="skill-name">Data Entry</span>
+                  <span class="skill-level" aria-label="Expert">● ● ● ● ●</span>
+                </li>
+
+                <li class="skill-item">
+                  <span class="skill-name">Excel Analysis</span>
+                  <span class="skill-level" aria-label="Advanced"
+                    >● ● ● ● ○</span
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ========== CERTIFICATES ========== -->
+      <section
+        id="certificates"
+        class="section-certificates"
+        aria-labelledby="certsTitle"
+      >
+        <div class="container">
+          <div class="section-header">
+            <span class="section-eyebrow">Learning</span>
+            <h2 id="certsTitle" class="section-title">
+              Certificates &amp; Achievements
+            </h2>
+            <p class="section-description">
+              Courses and certifications that reflect my commitment to
+              continuous growth.
+            </p>
+          </div>
+
+          <div class="certificates-grid">
+            <!-- Certificate 1 - Web Development -->
+            <article
+              class="certificate-card"
+              style="
+                background-image: url(&quot;assets/certificates/web-dev-certificate.jpg&quot;);
+              "
+            >
+              <div class="certificate-card-overlay"></div>
+
+              <div class="cert-content">
+                <h3 class="cert-title">Web Development</h3>
+                <p class="cert-issuer">
+                  National Engineering Development Limited(NEDL)
+                </p>
+                <time class="cert-date" datetime="2023-07">Jul 2023</time>
+                <a
+                  href="assets/certificates/certification_of_web_development.pdf"
+                  target="_blank"
+                  class="cert-link"
+                  >Verify →</a
+                >
+              </div>
+            </article>
+
+            <!-- Certificate 2 - Graphic Design -->
+            <article
+              class="certificate-card"
+              style="
+                background-image: url(&quot;assets/certificates/graphic-design-certificate.jpg&quot;);
+              "
+            >
+              <div class="certificate-card-overlay"></div>
+              <div class="cert-content">
+                <h3 class="cert-title">Graphic Design</h3>
+                <p class="cert-issuer">Jessore IT Institute</p>
+                <time class="cert-date" datetime="2021-02">Feb 2021</time>
+                <a
+                  href="assets/certificates/certification_of_graphic_design.pdf"
+                  target="_blank"
+                  class="cert-link"
+                  >Verify →</a
+                >
+              </div>
+            </article>
+
+            <!-- Certificate 3 - AI Prompt Engineer -->
+            <article
+              class="certificate-card"
+              style="
+                background-image: url(&quot;assets/certificates/ai-prompt-certificate.jpg&quot;);
+              "
+            >
+              <div class="certificate-card-overlay"></div>
+              <div class="cert-content">
+                <h3 class="cert-title">AI Prompt Engineer Level 1™</h3>
+                <p class="cert-issuer">AI CERTs™</p>
+                <time class="cert-date" datetime="2025-06">Jun 2025</time>
+                <a
+                  href="assets/certificates/Certification_of_prompt_engineering.pdf"
+                  target="_blank"
+                  class="cert-link"
+                  >Verify →</a
+                >
+              </div>
+            </article>
+
+            <!-- Certificate 4 - C++ -->
+            <article
+              class="certificate-card"
+              style="
+                background-image: url(&quot;assets/certificates/cpp-certificate.jpg&quot;);
+              "
+            >
+              <div class="certificate-card-overlay"></div>
+              <div class="cert-content">
+                <h3 class="cert-title">
+                  The Fundamentals of C++ Programming Language
+                </h3>
+                <p class="cert-issuer">Phitron</p>
+                <time class="cert-date" datetime="2025-02">Feb 2025</time>
+                <a
+                  href="assets/certificates/certification_of_C++.pdf"
+                  target="_blank"
+                  class="cert-link"
+                  >Verify →</a
+                >
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- ========== CONTACT ========== -->
+      <section
+        id="contact"
+        class="section-contact"
+        aria-labelledby="contactTitle"
+      >
+        <div class="container">
+          <div class="contact-wrapper">
+            <div class="contact-header">
+              <span class="section-eyebrow">Get in Touch</span>
+              <h2 id="contactTitle" class="section-title">
+                Let&rsquo;s work together.
+              </h2>
+              <p class="contact-description">
+                I&rsquo;m currently looking for opportunities. If you have an
+                interesting project or just want to say hello, I&rsquo;d love to
+                hear from you.
+              </p>
+            </div>
+
+            <div class="contact-grid">
+              <div class="contact-info">
+                <div class="contact-card">
+                  <span class="contact-card-icon" aria-hidden="true">✉</span>
+                  <div class="contact-card-content">
+                    <h4 class="contact-card-label">Email</h4>
+                    <a
+                      href="mailto:sishefa19@gmail.com"
+                      class="contact-card-value"
+                      >sishefa19@gmail.com</a
+                    >
+                  </div>
+                </div>
+
+                <div class="contact-card">
+                  <span class="contact-card-icon" aria-hidden="true">📍</span>
+                  <div class="contact-card-content">
+                    <h4 class="contact-card-label">Location</h4>
+                    <span class="contact-card-value"
+                      >Dhaka-1212, Bangladesh</span
+                    >
+                  </div>
+                </div>
+
+                <div class="contact-card">
+                  <span class="contact-card-icon" aria-hidden="true">📱</span>
+                  <div class="contact-card-content">
+                    <h4 class="contact-card-label">Phone</h4>
+                    <a href="phn:+1234567890" class="contact-card-value"
+                      >+880 9638611017</a
+                    >
+                  </div>
+                </div>
+
+                <div class="contact-social">
+                  <h4 class="contact-social-label">Find me online</h4>
+                  <div
+                    class="social-links"
+                    style="justify-content: flex-start; gap: 15px"
+                  >
+                    <a
+                      href="https://www.linkedin.com/in/sishefa19/"
+                      target="_blank"
+                      class="info-item reveal"
+                      style="padding: 12px; transition-delay: 0.8s"
+                      ><img
+                        src="https://cdn-icons-png.flaticon.com/512/174/174857.png"
+                        width="20"
+                        style="filter: invert(1)"
+                    /></a>
+                    <a
+                      href="https://x.com/sishefa19"
+                      target="_blank"
+                      class="info-item reveal"
+                      style="padding: 12px; transition-delay: 1s"
+                      ><img
+                        src="https://cdn-icons-png.flaticon.com/512/733/733579.png"
+                        width="20"
+                        style="filter: invert(1)"
+                    /></a>
+                    <a
+                      href="https://www.instagram.com/si.shefa/"
+                      target="_blank"
+                      class="info-item reveal"
+                      style="padding: 12px; transition-delay: 0.9s"
+                      ><img
+                        src="https://cdn-icons-png.flaticon.com/512/174/174855.png"
+                        width="20"
+                        style="filter: invert(1)"
+                    /></a>
+                    <a
+                      href="https://www.facebook.com/sishefa19"
+                      target="_blank"
+                      class="info-item reveal"
+                      style="padding: 12px; transition-delay: 0.7s"
+                      ><img
+                        src="https://upload.wikimedia.org/wikipedia/en/thumb/0/04/Facebook_f_logo_%282021%29.svg/3840px-Facebook_f_logo_%282021%29.svg.png"
+                        width="20"
+                        style="filter: invert(1)"
+                    /></a>
+                    <a
+                      href="https://t.me/sishefa19"
+                      target="_blank"
+                      class="info-item reveal"
+                      style="padding: 12px; transition-delay: 0.7s"
+                      ><img
+                        src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/82/Telegram_logo.svg/3840px-Telegram_logo.svg.png"
+                        width="20"
+                        style="filter: invert(1)"
+                    /></a>
+                  </div>
+                </div>
+              </div>
+
+              <div class="contact-form-wrapper">
+                <form class="contact-form" action="#" method="POST" novalidate>
+                  <div class="form-group">
+                    <label for="formName" class="form-label">Your Name</label>
+                    <input
+                      type="text"
+                      id="formName"
+                      name="name"
+                      class="form-input"
+                      placeholder="Enter your name"
+                      required
+                      autocomplete="name"
+                    />
+                  </div>
+                  <div class="form-group">
+                    <label for="formEmail" class="form-label"
+                      >Email Address</label
+                    >
+                    <input
+                      type="email"
+                      id="formEmail"
+                      name="email"
+                      class="form-input"
+                      placeholder="you@example.com"
+                      required
+                      autocomplete="email"
+                    />
+                  </div>
+                  <div class="form-group">
+                    <label for="formSubject" class="form-label">Subject</label>
+                    <input
+                      type="text"
+                      id="formSubject"
+                      name="subject"
+                      class="form-input"
+                      placeholder="What&rsquo;s this about?"
+                    />
+                  </div>
+                  <div class="form-group">
+                    <label for="formMessage" class="form-label">Message</label>
+                    <textarea
+                      id="formMessage"
+                      name="message"
+                      class="form-textarea"
+                      rows="5"
+                      placeholder="Tell me about your project or opportunity..."
+                      required
+                    ></textarea>
+                  </div>
+                  <button type="submit" class="btn btn-primary btn-full">
+                    Send Message <span aria-hidden="true">→</span>
+                  </button>
+                </form>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- ============================================================
+        FOOTER
+        ============================================================ -->
+    <footer class="site-footer" role="contentinfo" aria-label="Site footer">
+      <div class="container">
+        <div class="footer-grid">
+          <div class="footer-brand">
+            <p class="footer-name">Shefaul Islam Shefa</p>
+            <p class="footer-tagline">
+              Front-End Developer &amp; Digital Designer
+            </p>
+            <p class="footer-copy">
+              &copy; <span id="currentYear">2025</span> — All rights reserved.
+            </p>
+          </div>
+
+          <div class="footer-contact">
+            <div class="footer-contact-item">
+              <span class="footer-contact-icon" aria-hidden="true">✉</span>
+              <a href="mailto:sishefa19@gmail.com" class="footer-contact-link"
+                >sishefa19@gmail.com</a
+              >
+            </div>
+            <div class="footer-contact-item">
+              <span class="footer-contact-icon" aria-hidden="true">📍</span>
+              <span class="footer-contact-text">Dhaka-1212, Bangladesh</span>
+            </div>
+            <div class="footer-contact-item">
+              <span class="footer-contact-icon" aria-hidden="true">📱</span>
+              <a href="phn:+8809638611017" class="footer-contact-link"
+                >+880 9638611017</a
+              >
+            </div>
+          </div>
+
+          <div class="footer-social">
+            <h4 class="footer-social-label">Connect</h4>
+            <div class="footer-social-links">
+              <a
+                href="https://github.com/shefa19"
+                class="footer-social-link"
+                aria-label="GitHub"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <i class="fab fa-github" aria-hidden="true"></i>
+              </a>
+              <a
+                href="https://www.linkedin.com/in/sishefa19/"
+                class="footer-social-link"
+                aria-label="LinkedIn"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <i class="fab fa-linkedin-in" aria-hidden="true"></i>
+              </a>
+              <a
+                href="https://x.com/sishefa19"
+                class="footer-social-link"
+                aria-label="Twitter"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <i class="fab fa-twitter" aria-hidden="true"></i>
+              </a>
+              <a
+                href="https://www.behance.net/shefaulislam"
+                class="footer-social-link"
+                aria-label="Behance"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <i class="fab fa-behance" aria-hidden="true"></i>
+              </a>
+              <a
+                href="https://www.facebook.com/sishefa19"
+                class="footer-social-link"
+                aria-label="Facebook"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <i class="fab fa-facebook-f" aria-hidden="true"></i>
+              </a>
+            </div>
+          </div>
+        </div>
+
+        <div class="footer-bottom">
+          <p class="footer-credit">
+            Designed &amp; Developed by
+            <span class="credit-name">Shefaul Islam Shefa</span>
+            <span class="heart-icon" aria-hidden="true">❤</span>
+          </p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- ============================================================
+        BACK TO TOP BUTTON
+        ============================================================ -->
+    <button class="back-to-top" id="backToTop" aria-label="Back to top">
+      <svg
+        width="20"
+        height="20"
+        viewBox="0 0 24 24"
+        fill="none"
+        stroke="currentColor"
+        stroke-width="2"
+        stroke-linecap="round"
+        stroke-linejoin="round"
+        aria-hidden="true"
+      >
+        <polyline points="18 15 12 9 6 15"></polyline>
+      </svg>
+    </button>
+
+    <!-- ============================================================
+        MODAL PLACEHOLDERS
+        ============================================================ -->
+    <div
+      class="modal"
+      id="modal"
+      role="dialog"
+      aria-modal="true"
+      aria-labelledby="modalTitle"
+      hidden
+    >
+      <div class="modal-overlay" id="modalOverlay"></div>
+      <div class="modal-content">
+        <button class="modal-close" id="modalClose" aria-label="Close modal">
+          <span aria-hidden="true">&times;</span>
+        </button>
+        <div class="modal-body" id="modalBody">
+          <h2 id="modalTitle">Modal Title</h2>
+          <p>Modal content goes here.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- ============================================================
         SCRIPTS
         ============================================================ -->
-        <script src="js/script.js" defer></script>
-    </body>
+    <script src="js/script.js" defer></script>
+  </body>
 </html>
