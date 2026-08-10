@@ -34,14 +34,6 @@ It reflects my philosophy as a developer: **clean code, thoughtful design, and s
 
 ---
 
-## 📸 Preview
-
-![Portfolio Preview](./assets/images/portfolio-preview.png)
-
-> *Replace the image path above with an actual screenshot of your portfolio*
-
----
-
 ## 🛠️ Tech Stack
 
 | Category | Technologies |
